@@ -14,9 +14,15 @@
         margin:0; 
         padding:0; 
         box-sizing:border-box;
+        caret-color: transparent;
 
         
     }
+    
+    ::selection {
+    background-color: transparent; /* Set the background color to transparent */
+    color: inherit; /* Inherit the color of the text */
+}
 
   /* Google Font Import Link */
   @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
@@ -195,7 +201,7 @@ nav .nav-content{
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #444444; 
 }
  
 ::-webkit-scrollbar-thumb {
@@ -272,6 +278,7 @@ nav .nav-content{
   display: block;
   width: 100%;
   max-width: 700px;
+
 }
 
 .modal-content {  
@@ -297,10 +304,11 @@ nav .nav-content{
   top: 15px;
   right: 35px;
   color: #f1f1f1;
-  font-size: 40px;
+  font-size: 80px;
   font-weight: bold;
   transition: 0.3s;
   z-index: 1;
+
 }
 
 .close:hover, .close:focus {
@@ -337,6 +345,7 @@ nav .nav-content{
   left: 540px;
 
 } 
+
 
 
 /* ===================== */
@@ -387,9 +396,11 @@ nav .nav-content{
         <p id="ReviewsHeader">reviews and feedback</p>
         <img id="rectangle1" src="Rectangle1.png">
         <div>
+        
         <img class="modal-image" id="RPic1" src="ReviewsP1.png" data-large-src="ReviewsP1.png">
         <img class="modal-image" id="RPic2" src="ReviewsP2.png" data-large-src="ReviewsP2.png">
         <img class="modal-image" id="RPic3" src="ReviewsP3.png" data-large-src="ReviewsP3.png">
+  
         </div>
  
         <div id="myModal" class="modal">
