@@ -94,7 +94,7 @@ nav .nav-content{
 /* Landing Page */
 
 #RbLogo {
-    position: fixed;
+    position: absolute;
     top: 3.6px;
     height: 63px;
     left: 9px;
@@ -107,6 +107,14 @@ nav .nav-content{
     height: 54px;
     left: 90px;
 
+}
+
+#MenuButton {
+  position: absolute;
+  height: 50px;
+  top: 56%;
+  left: 74.5%;
+  transform: translate(-50%, -50%);
 }
 
 #RbHeadline {
@@ -447,7 +455,163 @@ section {
   letter-spacing: 0.5px;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
 
+.nav-links li a {
+  display: none;
+}
+
+nav {
+  padding: 31px;;
+}
+
+#RbLogo {
+  height: 55px;
+  top: 50%;
+  left: 11%;
+  transform: translate(-50%, -50%);
+}
+
+#RbText {
+  height: 50px;
+  top: 50%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+}
+
+#RbHeadline {
+  height: 360px;
+  top: 100px;
+  left: 65%;
+  transform: translate(-50%, -50%);
+}
+
+#HeadlineDescription {
+  font-size: 16px;
+  top: 265px;
+  left: 65%;
+  width: 350px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+#OrderButton {
+  height: 100px;
+  top: 50%;
+  left: 64%;
+  transform: translate(-50%, -50%);
+}
+
+#FbLink, #FbLinkHover {
+  height: 70px;
+  top: 450px;
+  left: 41%;
+  transform: translate(-50%, -50%);
+
+}
+
+#IgLink, #IgLinkHover {
+  height: 70px;
+  top: 450px;
+  left: 64%;
+  transform: translate(-50%, -50%);
+}
+
+#TTLink, #TTLinkHover {
+  height: 70px;
+  top: 450px;
+  left: 87%;
+  transform: translate(-50%, -50%);
+
+}
+
+
+}
+
+@media (min-width: 375px) and (max-width: 424px) {
+
+#MenuButton {
+  left: 76.5%;
+}
+
+#RbHeadline {
+  height: 400px;
+  top: 15%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+}
+
+@media (min-width: 425px) and (max-width: 480px) {
+
+#MenuButton {
+  left: 77.8%;
+}
+
+#RbHeadline {
+  height: 400px;
+  top: 15%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+}
+
+
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+#MenuButton {
+  display: none;
+}  
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+#MenuButton {
+  display: none;
+}  
+
+}
+
+@media (min-width: 1025px) {
+
+#MenuButton {
+display: none;
+
+}  
+
+}
+
+.sidebar{
+  position: fixed;
+  top: 42px; 
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #53122B;
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li{
+  width: 100%;
+  left: 10%;
+  font-family: koulen;
+  color: #FEC00B;
+  margin-left: 6.5%;
+  margin-top: 3%;
+}
+.sidebar a{
+  width: 100%;
+  color: #FEC00B;
+  text-decoration: none;
+}
 
 /* ===================== */
 
@@ -458,6 +622,7 @@ section {
 <body>
         <nav>
             <div class="nav-content">
+                    <img id="MenuButton" src="MenuButton.png" alt="" onclick="toggleSidebar()">
                     <img id="RbLogo" src="RetrobitesLogoTransparent.png">
                     <img id="RbText" src="RbTextLogoFinal.png">
             <div class="logo">
@@ -472,6 +637,9 @@ section {
             </ul>
           </div>
         </nav>
+
+        
+
         
         <section id="Headline">
 
@@ -492,39 +660,9 @@ section {
 
             <img id="TTLink" src="RbTiktokIconYellowRedBG.png">
             <img id="TTLinkHover" src="RbTiktokIconYellowRedBGHover.png">
+
       </section>
 
-    
-      <!-- <section id="Reviews">
-        <p id="ReviewsHeader">reviews and feedback</p>
-        
-
-        <img id="rectangle1" src="Rectangle1.png">
-
-        <p id="ReviewUser1"> Cyrus Jaciel Gal</p>
-
-        <img id="ReviewStars1" src="ReviewStars.png">
-
-        <p id="ReviewTime1"> a year ago</p>
-
-        <p id="ReviewsText1">We tried their ultimate unlimited package wherein we had an unlimited burger. The food was great and superb. We are very full. The owner and the crew are very kind and accommodating. 
-           The place is not that high-end<br> and need some maintenance to attract more customers. Overall, our experience was great since the food were delicious especially the Takoyaki and Burger.</p>
-          <img id="Review1Pic" src="Review1Pic.png">
-
-        <div>
-        
-        <img class="modal-image" id="RPic1" src="ReviewsP1.png" data-large-src="ReviewsP1.png">
-        <img class="modal-image" id="RPic2" src="ReviewsP2.png" data-large-src="ReviewsP2.png">
-        <img class="modal-image" id="RPic3" src="ReviewsP3.png" data-large-src="ReviewsP3.png">
-  
-        </div>
- 
-        <div id="myModal" class="modal">
-          <span class="close">&times;</span>
-          <img class="modal-content" id="img01">
-        </div>
-      </section> -->
-      
       <section class="container">
 
         <div class="testimonial mySwiper">
@@ -533,6 +671,7 @@ section {
 
             
             <div class="slide swiper-slide">
+
               <img src="Review1Pic.png" id="Review1Pic" class="image" />
 
               <p id="ReviewUser1"> Cyrus Jaciel Gal</p>
@@ -551,10 +690,7 @@ section {
               <img class="modal-image" id="RPic1" src="ReviewsP1.png" data-large-src="ReviewsP1.png">
               <img class="modal-image" id="RPic2" src="ReviewsP2.png" data-large-src="ReviewsP2.png">
               <img class="modal-image" id="RPic3" src="ReviewsP3.png" data-large-src="ReviewsP3.png">
-        
-              
-       
-           
+    
             </div>
   
     
@@ -631,8 +767,6 @@ section {
           libero voluptates quos. Cumque necessitatibus perferendis eveniet laboriosam in iusto, amet excepturi soluta, <br> 
           voluptatem nam cum, ipsum architecto repellendus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>  </p>
       </section>
-
-
 
 
 
