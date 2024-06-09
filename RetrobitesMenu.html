@@ -94,9 +94,9 @@ nav .nav-content{
 #MenuButton {
   position: absolute;
   height: 50px;
-  left: 67% ;
-  top: 12px;
-  margin-left: auto;
+  top: 56%;
+  left: 74.5%;
+  transform: translate(-50%, -50%);
 }
 
 .nav-links {
@@ -170,12 +170,38 @@ nav {
 
 #RbLogo {
   height: 55px;
+  top: 3.5%;
+  left: 11%;
+  transform: translate(-50%, -50%);
 }
 
 #RbText {
   height: 50px;
-  left: 70px;
+  top: 50%;
+  left: 43%;
+  transform: translate(-50%, -50%);
 }
+
+}
+
+@media (min-width: 375px) and (max-width: 424px) {
+
+#MenuButton {
+  left: 76.5%;
+}
+
+
+
+
+}
+
+@media (min-width: 425px) and (max-width: 480px) {
+
+#MenuButton {
+  left: 77.8%;
+}
+
+
 
 }
 
@@ -187,6 +213,50 @@ nav {
 
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  #MenuButton {
+  display: none;
+}  
+
+}
+
+@media (min-width: 1025px) {
+
+#MenuButton {
+display: none;
+
+}  
+
+}
+
+.sidebar{
+  position: fixed;
+  top: 42px; 
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #53122B;
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li{
+  width: 100%;
+  left: 10%;
+  font-family: koulen;
+  color: #FEC00B;
+  margin-left: 6.5%;
+  margin-top: 3%;
+}
+.sidebar a{
+  width: 100%;
+  color: #FEC00B;
+  text-decoration: none;
+}
+
 
     </style>
 
@@ -194,7 +264,7 @@ nav {
 <body>
     <nav>
         <div class="nav-content">
-                <img id="MenuButton" src="MenuButton.png" alt="">
+                <img id="MenuButton" src="MenuButton.png" alt="" onclick="toggleSidebar()">
                 <img id="RbLogo" src="RetrobitesLogoTransparent.png">
                 <img id="RbText" src="RbTextLogoFinal.png">
                 
@@ -203,6 +273,12 @@ nav {
         </div>
       
         <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="RetrobitesMenu.html">Menu</a></li>
+          <li><a href="RetrobitesDelivery.html">Delivery</a></li>
+          <li><a href="#">Locations</a></li>
+        </ul>
+        <ul class="sidebar">
           <li><a href="index.html">Home</a></li>
           <li><a href="RetrobitesMenu.html">Menu</a></li>
           <li><a href="RetrobitesDelivery.html">Delivery</a></li>
@@ -219,6 +295,17 @@ nav {
       <img src="Menu3.png" id="Menu3" alt="">
 
       </div>
+
+      <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            if (sidebar.style.display === 'none' || sidebar.style.display === '') {
+                sidebar.style.display = 'flex';
+            } else {
+                sidebar.style.display = 'none';
+            }
+        }
+    </script>
 
     </section>
 </body>
