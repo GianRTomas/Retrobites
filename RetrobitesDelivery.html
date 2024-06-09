@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         body {
+        background-color: #202020;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        margin:0; 
+        padding:0; 
+        box-sizing:border-box;
+        caret-color: transparent;
+
+
+        
+    }
+html {
+  scroll-snap-type: y mandatory;
+}
+    
+    ::selection {
+    background-color: transparent; /* Set the background color to transparent */
+    color: inherit; /* Inherit the color of the text */
+}
+
+  /* Google Font Import Link */
+  @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 36px;
+  background: #8B083A;
+  z-index: 1;
+}
+nav .nav-content{
+  height: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center
+}
+
+.nav-content .nav-links{
+  display: flex;
+  height: 32.8px;
+}
+
+.nav-content .nav-links li{
+  list-style: none;
+
+}
+.nav-links li a {
+  color: #FEC00B;
+  font-family: 'Koulen';
+  font-weight: 500;
+  padding: 23.6px 18px; /* Adjusted padding */
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  left: -44.8px;
+  font-size: 16.2px;
+  letter-spacing: 0.5px;
+
+}
+
+.nav-links li a:hover {
+  background-color:#2A0916; /* Highlight effect */
+}
+
+#RbLogo {
+    position: fixed;
+    top: 3.6px;
+    height: 63px;
+    left: 9px;
+
+}
+
+#RbText {
+    position: absolute;
+    top: 9px;
+    height: 54px;
+    left: 90px;
+
+}
+
+.nav-links {
+    position: absolute;
+    left: 300px;
+}
+
+/* ===================== */
+
+#DeliveryProcess {
+  position: absolute;
+  top: 350px;
+  width: 1750px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+
+    </style>
+
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+                <img id="RbLogo" src="RetrobitesLogoTransparent.png">
+                <img id="RbText" src="RbTextLogoFinal.png">
+        <div class="logo">
+          <a href="#"></a>
+        </div>
+      
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="RetrobitesMenu.html">Menu</a></li>
+          <li><a href="RetrobitesDelivery.html">Delivery</a></li>
+          <li><a href="#">Locations</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section>
+      <img src="DeliveryProcess.png" id="DeliveryProcess" alt="">
+
+
+
+    </section>
+</body>
+</html>
