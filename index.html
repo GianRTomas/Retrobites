@@ -17,9 +17,14 @@
     rel="stylesheet" />
 
 <style>
-  
+
+@font-face {
+  font-family: 'koulen';
+  src: url(Koulen-Regular.ttf);
+}  
+
 body {
-  background-color: #202020;
+  background-color: #1c1c1c;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
@@ -32,25 +37,29 @@ body {
 html {
   scroll-snap-type: y mandatory;
 }
+
+section  {
+
+  scroll-snap-align: start;
+  scroll-margin-top: 76px;
+
+}
     
-    ::selection {
-    background-color: transparent; /* Set the background color to transparent */
-    color: inherit; /* Inherit the color of the text */
+::selection {
+  background-color: transparent; /* Set the background color to transparent */
+  color: inherit; /* Inherit the color of the text */
 }
 
-  /* Google Font Import Link */
-  @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
-
+/* Navigation Bar */
 
 nav{
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  padding: 36px;
+  height: 76px;
   background: #8B083A;
-  z-index: 1;
+  z-index: 4;
 }
+
 nav .nav-content{
   height: 100%;
   max-width: 1200px;
@@ -78,7 +87,6 @@ nav .nav-content{
   left: -44.8px;
   font-size: 16.2px;
   letter-spacing: 0.5px;
-
 }
 
 .nav-links li a:hover {
@@ -90,8 +98,15 @@ nav .nav-content{
     left: 340px;
 }
 
+/* ===================== */
 
 /* Landing Page */
+
+#Headline {
+  width: 100%;
+  height: 1080px;
+}
+
 
 #RbLogo {
     position: absolute;
@@ -124,7 +139,7 @@ nav .nav-content{
   left: 45px;
   pointer-events: none;
   filter: drop-shadow(5px 5px 5px #000000);
-
+  z-index: 3;
 }
 
 #HeadlineDescription {
@@ -136,6 +151,7 @@ nav .nav-content{
   filter: drop-shadow(5px 5px 5px #000000);
   font-size: 18px;
   letter-spacing: 0.5px;
+  z-index: 3;
 }
 
 #OrderButton {
@@ -143,6 +159,7 @@ nav .nav-content{
   height: 135px;
   top: 540px;
   left: 23.4px;
+  z-index: 3;
 }
 
 #FbLink {
@@ -150,6 +167,7 @@ nav .nav-content{
   height: 90px;
   top: 720px;
   left: 45px;
+  z-index: 3;
 }
 
 #FbLinkHover {
@@ -159,6 +177,7 @@ nav .nav-content{
   left: 45px;
   opacity: 0;
   transition: all 0.2s ease;
+  z-index: 3;
 }
 
 #FbLinkHover:hover {
@@ -167,6 +186,7 @@ nav .nav-content{
   top: 720px;
   left: 45px;
   opacity: 1;
+  z-index: 3;
 }
 
 #IgLink {
@@ -174,6 +194,7 @@ nav .nav-content{
   height: 90px;
   top: 720px;
   left: 144px;
+  z-index: 3;
 }
 
 #IgLinkHover {
@@ -183,6 +204,7 @@ nav .nav-content{
   left: 144px;
   opacity: 0;
   transition: all 0.2s ease;
+  z-index: 3;
 }
 
 #IgLinkHover:hover {
@@ -191,6 +213,7 @@ nav .nav-content{
   top: 720px;
   left: 144px;
   opacity: 1;
+  z-index: 3;
 } 
 
 #TTLink {
@@ -198,6 +221,7 @@ nav .nav-content{
   height: 90px;
   top: 720px;
   left: 243px;
+  z-index: 3;
 }
 
 #TTLinkHover {
@@ -207,6 +231,7 @@ nav .nav-content{
   left: 243px;
   opacity: 0;
   transition: all 0.2s ease;
+  z-index: 3;
 }
 
 #TTLinkHover:hover {
@@ -215,6 +240,7 @@ nav .nav-content{
   top: 720px;
   left: 243px;
   opacity: 1;
+  z-index: 3;
 } 
 
 /* ===================== */
@@ -233,21 +259,13 @@ nav .nav-content{
   background: #888; 
 }
 
-
-
 /* ===================== */
-
-#Headline {
-  width: 100%;
-  height: 957.6px;
-
-}
 
 /* Reviews and Feedback Section */
 
 #Reviews {
- background-color: #191919;
- height: 877.6px;
+ background-color: #1c1c1c;
+ height: 1080px;
  width: 100%;
 }
 
@@ -420,10 +438,7 @@ nav .nav-content{
 
 } 
 
-section {
-  scroll-snap-align: start;
-  scroll-margin-top: 72px;
-}
+
 
 /* ===================== */
 
@@ -431,12 +446,12 @@ section {
 
 #AboutUs {
   width: 100%;
-  height: 957.6px;
+  height: 1080px;
 }
 
 #AboutUsHeader {
   position: absolute;
-  top: 1917px;
+  top: 2250px;
   left: 230px;
   font-family: Koulen;
   color: #FEC00B;
@@ -447,13 +462,17 @@ section {
 
 #AboutUsDescription {
   position: absolute;
-  top: 2097px;
+  top: 2400px;
   left: 230px;
   font-family: Koulen;
   color: white;
   font-size: 18px;
   letter-spacing: 0.5px;
 }
+
+/* ===================== */
+
+/* Layouts */
 
 @media (min-width: 320px) and (max-width: 480px) {
 
@@ -615,6 +634,80 @@ display: none;
 
 /* ===================== */
 
+.banner {
+	position: absolute;
+	width: 100%;
+	height: 1080px;
+	overflow: hidden;
+}
+.banner-img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: no-repeat 50% 50%;
+	background-size: cover;
+	animation: animate 10s linear infinite;
+	opacity: 1;
+	transform: scale(1);
+}
+.banner-img:nth-child(1) {
+	animation-name: animate-1;
+	z-index: 3;
+}
+.banner-img:nth-child(2) {
+	animation-name: animate-2;
+	z-index: 2;
+}
+.banner-img:nth-child(3) {
+	animation-name: animate-3;
+	z-index: 1;
+}
+@keyframes animate-1 {
+	0% {
+		opacity: 1;
+	}
+	33% {
+		opacity: 1;
+	}
+	36% {
+		opacity: 0;
+	}
+	66% {
+		opacity: 0;
+	}
+	97% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes animate-2 {
+	36% {
+		opacity: 1;
+	}
+	66% {
+		opacity: 1;
+	}
+	69% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes animate-3 {
+	69% {
+		opacity: 1;
+	}
+	97% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
 </style>
 
 </head>
@@ -638,10 +731,13 @@ display: none;
           </div>
         </nav>
 
-        
-
-        
         <section id="Headline">
+
+          <div class="banner">
+            <div class="banner-img"> <img src="LandingPagePizzaB.png" alt=""></div>
+            <div class="banner-img"> <img src="LandingPageBurgerB.png" alt=""></div>
+            <div class="banner-img"> <img src="LandingPageWingsB.png" alt=""></div>
+          </div>
 
           <img id="RbHeadline" src="RbTextHomepage.png">
           <p id="HeadlineDescription">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus, nisi voluptatem? <br> 
@@ -668,8 +764,6 @@ display: none;
         <div class="testimonial mySwiper">
           <div class="testi-content swiper-wrapper">
   
-
-            
             <div class="slide swiper-slide">
 
               <img src="Review1Pic.png" id="Review1Pic" class="image" />
@@ -693,9 +787,6 @@ display: none;
     
             </div>
   
-    
-
-
             <div class="slide swiper-slide">
               <img src="images/img2.jpg" alt="" class="image" />
               <p>
@@ -748,7 +839,6 @@ display: none;
       <!-- JavaScript -->
       <script src="js/script.js"></script>
 
-
       <section id="AboutUs">
         <p id="AboutUsHeader">about - us retrobites burger <br> karterl unlimited</p>
         <p id="AboutUsDescription">
@@ -767,14 +857,6 @@ display: none;
           libero voluptates quos. Cumque necessitatibus perferendis eveniet laboriosam in iusto, amet excepturi soluta, <br> 
           voluptatem nam cum, ipsum architecto repellendus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>  </p>
       </section>
-
-
-
-
-
-
-
-
 
       <script>
         // Get the modal
@@ -801,7 +883,6 @@ display: none;
         }
         </script>
         
-
 </body>
 
 </html>
