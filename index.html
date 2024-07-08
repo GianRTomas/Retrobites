@@ -10,11 +10,6 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
-    
-    <!-- Boxicons CSS -->
-    <link
-    href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-    rel="stylesheet" />
 
 <style>
 
@@ -39,10 +34,7 @@ html {
 }
 
 section  {
-
   scroll-snap-align: start;
-  scroll-margin-top: 76px;
-
 }
     
 ::selection {
@@ -54,12 +46,13 @@ section  {
 
 nav{
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 76px;
+  padding: 36px;
   background: #8B083A;
-  z-index: 4;
+  z-index: 1;
 }
-
 nav .nav-content{
   height: 100%;
   max-width: 1200px;
@@ -95,18 +88,36 @@ nav .nav-content{
 
 .nav-links {
     position: absolute;
-    left: 340px;
+    left: 300px;
 }
 
 /* ===================== */
 
 /* Landing Page */
 
-#Headline {
+.HeadlineContainer {
+  height: 953px;
   width: 100%;
-  height: 1080px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c1c1c;
 }
 
+.Thingy {
+  position: relative;
+  max-width: 1920px;
+  width: 100%;
+  height: 953px;
+  overflow: visible;
+  background-color: #1c1c1c;
+  z-index: 0;
+}
+
+#Headline {
+  width: 100%;
+  height: 953px;
+}
 
 #RbLogo {
     position: absolute;
@@ -134,10 +145,10 @@ nav .nav-content{
 
 #RbHeadline {
   position: absolute;
-  height: 720px;
-  top: -198PX;
+  height: 220px;
+  top: 120px;
   left: 45px;
-  pointer-events: none;
+
   filter: drop-shadow(5px 5px 5px #000000);
   z-index: 3;
 }
@@ -263,14 +274,7 @@ nav .nav-content{
 
 /* Reviews and Feedback Section */
 
-#Reviews {
- background-color: #1c1c1c;
- height: 1080px;
- width: 100%;
-}
-
 #ReviewsHeader {
-  
   color: white;
   font-family: Koulen;
   filter: drop-shadow(5px 5px 5px #000000); 
@@ -310,7 +314,7 @@ nav .nav-content{
 
 #ReviewUser1 {
   position: absolute;
-  bottom: 460PX;
+  bottom: 445PX;
   left: 57px;
   font-family: Koulen;
   color: white;
@@ -329,7 +333,7 @@ nav .nav-content{
 
 #ReviewTime1 {
   position: absolute;
-  bottom: 400px;
+  bottom: 385px;
   left: 57px;
   font-family: Koulen;
   color: white;
@@ -344,6 +348,7 @@ nav .nav-content{
   transition: 0.3s;
   width: 20%;
 }
+
 
 /* The Modal (background) */
 .modal {
@@ -446,13 +451,13 @@ nav .nav-content{
 
 #AboutUs {
   width: 100%;
-  height: 1080px;
+  height: 953px;
 }
 
 #AboutUsHeader {
   position: absolute;
-  top: 2250px;
-  left: 230px;
+  top: 200px;
+  left: 300px;
   font-family: Koulen;
   color: #FEC00B;
   font-size: 45px;
@@ -462,12 +467,20 @@ nav .nav-content{
 
 #AboutUsDescription {
   position: absolute;
-  top: 2400px;
-  left: 230px;
+  top: 350px;
+  left: 300px;
   font-family: Koulen;
   color: white;
-  font-size: 18px;
+  font-size: 21px;
   letter-spacing: 0.5px;
+
+}
+
+#AboutUsPhoto {
+  position: absolute;
+  top: 150px;
+  width: 450px;
+  left: 1050px;
 }
 
 /* ===================== */
@@ -499,16 +512,20 @@ nav {
 }
 
 #RbHeadline {
-  height: 360px;
-  top: 100px;
-  left: 65%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-height: 87px;
+  max-width: 325px;
+  top: 15%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
 #HeadlineDescription {
-  font-size: 16px;
-  top: 265px;
-  left: 65%;
+  font-size: 10px;
+  top: 25%;
+  left: 50%;
   width: 350px;
   text-align: center;
   transform: translate(-50%, -50%);
@@ -516,34 +533,36 @@ nav {
 
 #OrderButton {
   height: 100px;
-  top: 50%;
-  left: 64%;
+  top: 35%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
-#FbLink, #FbLinkHover {
+#FbLink, #FbLinkHover, #FbLinkHover:hover{
   height: 70px;
-  top: 450px;
-  left: 41%;
+  top: 400px;
+  left: 30%;
   transform: translate(-50%, -50%);
-
 }
 
-#IgLink, #IgLinkHover {
+#IgLink, #IgLinkHover, #IgLinkHover:hover {
   height: 70px;
-  top: 450px;
-  left: 64%;
+  top: 400px;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
-#TTLink, #TTLinkHover {
+#TTLink, #TTLinkHover, #TTLinkHover:hover {
   height: 70px;
-  top: 450px;
-  left: 87%;
+  top: 400px;
+  left: 70%;
   transform: translate(-50%, -50%);
 
 }
 
+.banner {
+  display: none;
+}
 
 }
 
@@ -559,7 +578,6 @@ nav {
   left: 62%;
   transform: translate(-50%, -50%);
 }
-
 
 
 }
@@ -634,11 +652,14 @@ display: none;
 
 /* ===================== */
 
+
+
 .banner {
 	position: absolute;
 	width: 100%;
-	height: 1080px;
+	height: 100%;
 	overflow: hidden;
+  max-height: 953px;
 }
 .banner-img {
 	position: absolute;
@@ -733,18 +754,22 @@ display: none;
 
         <section id="Headline">
 
+          <div class="HeadlineContainer">
+            <div class="Thingy">
+
           <div class="banner">
-            <div class="banner-img"> <img src="LandingPagePizzaB.png" alt=""></div>
-            <div class="banner-img"> <img src="LandingPageBurgerB.png" alt=""></div>
-            <div class="banner-img"> <img src="LandingPageWingsB.png" alt=""></div>
+            <div class="banner-img"> <img id="S1" src="LandingPagePizzaB2.png" alt=""></div>
+            <div class="banner-img"> <img id="S1" src="LandingPageBurgerB2.png" alt=""></div>
+            <div class="banner-img"> <img id="S1" src="LandingPageWingsB2.png" alt=""></div>
           </div>
 
           <img id="RbHeadline" src="RbTextHomepage.png">
+
           <p id="HeadlineDescription">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus, nisi voluptatem? <br> 
             Qui, non doloribus fuga alias sapiente nesciunt perspiciatis eaque dolorum laborum consequatur <br>
             incidunt ab amet repellat dicta porro? Id?</p>
            
-            <img id="OrderButton"  src="RbOrderButton.png">
+          <img id="OrderButton"  src="RbOrderButton.png">
 
           <a href="https://www.facebook.com/profile.php?id=61553779395919" target ="_blank"> 
             <img id="FbLink" src="RbFacebookIconYellowRedBG.png"> 
@@ -757,11 +782,15 @@ display: none;
             <img id="TTLink" src="RbTiktokIconYellowRedBG.png">
             <img id="TTLinkHover" src="RbTiktokIconYellowRedBGHover.png">
 
+            </div>
+          </div>
+
       </section>
 
       <section class="container">
 
         <div class="testimonial mySwiper">
+          
           <div class="testi-content swiper-wrapper">
   
             <div class="slide swiper-slide">
@@ -840,22 +869,29 @@ display: none;
       <script src="js/script.js"></script>
 
       <section id="AboutUs">
-        <p id="AboutUsHeader">about - us retrobites burger <br> karterl unlimited</p>
+      
+        <div class="HeadlineContainer">
+          
+          <div class="Thingy">
+
+        <p id="AboutUsHeader">about us - retrobites burger <br> karterl unlimited</p>
+
         <p id="AboutUsDescription">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque pariatur et libero voluptates quos. <br>
-          Cumque necessitatibus perferendis eveniet laboriosam in iusto, amet excepturi soluta, voluptatem nam cum, <br>
-          ipsum architecto repellendus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque pariatur et <br> 
-          libero voluptates quos. Cumque necessitatibus perferendis eveniet laboriosam in iusto, amet excepturi soluta, <br> 
-          voluptatem nam cum, ipsum architecto repellendus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> 
-          Cumque pariatur et libero voluptates quos. Cumque necessitatibus perferendis eveniet laboriosam in iusto, <br> 
-          amet excepturi soluta, voluptatem nam cum, ipsum architecto repellendus! Lorem ipsum dolor sit amet, consectetur <br> 
-          adipisicing elit. Cumque pariatur et libero voluptates quos. Cumque necessitatibus perferendis eveniet laboriosam in <br> 
-          iusto, amet excepturi soluta, voluptatem nam cum, ipsum architecto repellendus! perferendis eveniet laboriosam in <br>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque pariatur et libero voluptates quos. <br>
-          Cumque necessitatibus perferendis eveniet laboriosam in iusto, amet excepturi soluta, voluptatem nam cum, <br>
-          ipsum architecto repellendus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque pariatur et <br> 
-          libero voluptates quos. Cumque necessitatibus perferendis eveniet laboriosam in iusto, amet excepturi soluta, <br> 
-          voluptatem nam cum, ipsum architecto repellendus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>  </p>
+          Welcome to Retrobites Burger Kartel Unlimited! Step into our <br> 
+          culinary kartel, where we have been serving customers delicious <br>
+          and affordable food since 2022. Our menu doesn't just only offer <br>
+          burgers, but also offer many of your favorite comfort foods <br> 
+          such as chicken wings, french fries, takoyaki, pizza and more! <br>
+          All with many different flavors to choose from! Select from our <br>
+          unlimited all you can eat packages when you dine in or order <br> 
+          ala carte when you take out or order for delivery. Come visit us here <br>
+          at our main branch at Retrobites in Taguig City or at our newly <br>
+          franchised location at Jazzy n' Jin Foobhub in Mabalacat City. </p>
+
+          <img id="AboutUsPhoto" src="LrEditRbAboutUsPhotoPs2.png" alt="">
+
+        </div>
+      </div>
       </section>
 
       <script>
