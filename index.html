@@ -495,6 +495,10 @@ nav .nav-content{
 
 @media (min-width: 320px) and (max-width: 480px) {
 
+html {
+  scroll-snap-type: unset;
+}
+
 .nav-links li a {
   display: none;
 }
@@ -665,12 +669,10 @@ nav {
   max-width: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-bottom: 20px;
 }
 
 #AboutUsHeader {
   top: 53%;
-  margin-top: 20px;
   left: 50%;
   width: 80%;
   font-size: 18px;
@@ -817,19 +819,38 @@ nav {
 }
 
 #AboutUsPhoto {
-  top: 29%;
+  top: 32%;
 }
 
 #AboutUsHeader {
-  top: 58%;
+  top: 62%;
   font-size: 20px;
 }
 
 #AboutUsDescription {
-  top: 83%;
+  top: 88%;
   font-size: 14px;
-}  
+}
 
+}
+
+/*=============================================================================================================================================================================================*/
+
+@media (min-width: 386px) and (max-width: 425px) {
+
+#AboutUsHeader {
+  top: 63.5%;
+}
+
+}
+
+/*=============================================================================================================================================================================================*/
+
+@media (min-width: 415px) and (max-width: 425px) {
+
+#AboutUsHeader {
+  top: 64.5%;
+}
 
 }
 
@@ -924,29 +945,42 @@ nav {
   transform: translate(-50%, -50%);
 }
 
-#AboutUsHeader {
-  top: 65%;
-  left: 50%;
-  width: 65%;
-  font-size: 23px;
-  transform: translate(-50%, -50%);
-}
-
-#AboutUsDescription {
-  top: 95%;
-  left: 50%;
-  font-size: 15px;
-  width: 64%;
-  transform: translate(-50%, -50%);
-  margin: 0px;
-  padding: 0px;
+#AboutUs {
+  height: 1440px;
 }
 
 #AboutUsPhoto {
   top: 35%;
-  width: 350px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+}
+
+#AboutUsHeader {
+  top: 70%;
+  font-size: 22px;
+}
+
+#AboutUsDescription {
+  top: 100%;
+  font-size: 16px;
+}
+
+}
+
+/*=============================================================================================================================================================================================*/
+
+@media (min-width: 436px) and (max-width: 480px) {
+  #AboutUsHeader {
+  top: 71%;
+  font-size: 22px;
+}
+
+}
+
+/*=============================================================================================================================================================================================*/
+
+@media (min-width: 469px) and (max-width: 480px) {
+  #AboutUsHeader {
+  top: 72%;
+  font-size: 22px;
 }
 
 }
@@ -954,27 +988,56 @@ nav {
 /*=============================================================================================================================================================================================*/
 
 @media (min-width: 481px) and (max-width: 768px) {
-
-#MenuButton {
+.banner {
   display: none;
-}  
+}
+
+#Headline{
+  height: 1280px;
+}
+
+html {
+  scroll-snap-type: unset;
+}
+
+.nav-links li a {
+  display: none;
+}
+
+nav {
+  padding: 31px;;
+}
+
+#RbLogo {
+  height: 55px;
+  top: 50%;
+  left: 11%;
+  transform: translate(-50%, -50%);
+}
+
+#RbText {
+  height: 50px;
+  top: 50%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+}
 
 #RbHeadline {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  max-height: 173px;
-  max-width: 645px;
-  top: 21%;
+  width:unset;
+  height: unset;
+  max-height: 90%;
+  max-width: 90%;
+  top: 16%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 #HeadlineDescription {
-  font-size: 24px;
-  width: 100%;
-  max-width: 645px;
-  top: 42%;
+  font-size: 18px;
+  width: 90%;
+  text-align: justify;
+  top: 32%;
   left: 50%;
   letter-spacing: 0.5px;
   margin: 0px;
@@ -983,148 +1046,158 @@ nav {
 }
 
 #OrderButton {
-  height: 170px;
-  top: 58%;
+  height: unset;
+  max-width: 80%;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#M1 {
+  position: absolute;
+  top: 65%;
+  max-width: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#Follow {
+  font-size: 24px;
+  top: 105%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 #FbLink, #FbLinkHover, #FbLinkHover:hover{
-  height: 120px;
-  top: 680px;
-  left: 30%;
+  height: unset;
+  max-width: 20%;
+  top: 115%;
+  left: 29%;
   transform: translate(-50%, -50%);
 }
 
 #IgLink, #IgLinkHover, #IgLinkHover:hover {
-  height: 120px;
-  top: 680px;
+  height: unset;
+  max-width: 20%;
+  top: 115%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 #TTLink, #TTLinkHover, #TTLinkHover:hover {
-  height: 120px;
-  top: 680px;
-  left: 70%;
+  height: unset;
+  max-width: 20%;
+  top: 115%;
+  left: 71%;
   transform: translate(-50%, -50%);
 }
 
-.banner {
-  display: none;
+.testimonial {
+  height: 700px;
 }
 
-.container {
-  height: 1440px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #202020;
+#ReviewsText1 {
+  position: absolute;
+  font-size: 18px;
+  width: 85%;
+  text-align: justify;
+  padding: 0px;
+  top: 24%;
 }
-.testimonial {
-  position: relative;
-  max-width: 1800px;
-  width: 100%;
-  height: 987px;
-  padding: 50px 0;
-  overflow: hidden;
-  background-color: #1c1c1c;
-  z-index: 0;
+
+#Review1Pic {
+  width: 100px;
+  height: 100px;
+  top: 11%;
+  left: 18%;
+  transform: translate(-50%, -50%);
+}
+
+#ReviewUser1 {
+  top: 12.5%;
+  left: 45%;
+  font-size: 18px;
+  transform: translate(-50%, -50%);
+}
+
+#ReviewStars1 {
+  top: 11.5%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 135px;
+}
+
+#ReviewTime1 {
+  top: 20%;
+  left: 45%;
+  width: 120px;
+  font-size: 18px;
+  padding: 0px;
+  transform: translate(-50%, -50%);
 }
 
 #RPic1 {
   position: absolute;
-  width: 190px;
-  top: 78%;
+  width: unset;
+  max-width: 28%;
+  top: 80%;
   left: 20%;
   transform: translate(-50%, -50%);
 }
 
 #RPic2 {
   position: absolute;
-  width: 190px;
-  top: 78%;
+  width: unset;
+  max-width: 28%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 #RPic3 {
   position: absolute;
-  width: 190px;
-  top: 78%;
+  width: unset;
+  max-width: 28%;
+  top: 80%;
   left: 80%;
   transform: translate(-50%, -50%);
 } 
 
-#ReviewsText1 {
-  position: absolute;
-  font-size: 24px;
-  width: 85%;
-  text-align: justify;
-  padding: 0px;
-  top: 28%;
-}
-
-#Review1Pic {
-  width: 160px;
-  height: 160px;
-  top: 15%;
-  left: 18%;
-  transform: translate(-50%, -50%);
-}
-
-#ReviewUser1 {
-  top: 20%;
-  left: 42%;
-  padding: 0px;
-  font-size: 24px;
-  transform: translate(-50%, -50%);
-}
-
-#ReviewStars1 {
-  top: 14%;
-  left: 42%;
-  transform: translate(-50%, -50%);
-  width: 185px;
-}
-
-#ReviewTime1 {
-  top: 28%;
-  left: 38%;
-  padding: 0px;
-  font-size: 24px;
-  transform: translate(-50%, -50%);
-}
-
 #AboutUs {
-  height: 2048px;
-}
-
-#AboutUsHeader {
-  top: 130%;
-  left: 50%;
-  width: 73%;
-  font-size: 48px;
-  transform: translate(-50%, -50%);
-}
-
-#AboutUsDescription {
-  top: 173%;
-  left: 50%;
-  font-size: 24px;
-  width: 73%;
-  transform: translate(-50%, -50%);
-  margin: 0px;
-  padding: 0px;
+  height: 1440px;
 }
 
 #AboutUsPhoto {
-  top: 70%;
-  width: 680px;
+  top: 40%;
+  width: unset;
+  max-width: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+#AboutUsHeader {
+  top: 80%;
+  left: 50%;
+  width: 80%;
+  font-size: 24px;
+  transform: translate(-50%, -50%);
+  text-align: justify;
+}
+
+#AboutUsDescription {
+  top: 115%;
+  left: 50%;
+  font-size: 18px;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  margin: 0px;
+  padding: 0px;
+  text-align: justify;
+  box-sizing: border-box;
+}
+
+
+
 }
 
 /*=============================================================================================================================================================================================*/
@@ -1157,7 +1230,7 @@ display: none;
 
 /*=============================================================================================================================================================================================*/
 
-@media (min-width: 1400px) and (max-width: 1920px) {
+@media (min-width: 1400px) {
 
 #MenuButton {
 display: none;
