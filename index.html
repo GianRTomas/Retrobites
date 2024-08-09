@@ -14,35 +14,11 @@
 <style>
 
 @font-face {
-  font-family: 'koulen';
-  src: url(Koulen-Regular.ttf);
-}  
+    font-family: 'koulen';
+    src: url(Koulen-Regular.ttf);
+} 
 
-body {
-  background-color: #1c1c1c;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  margin:0; 
-  padding:0; 
-  box-sizing:border-box;
-  caret-color: transparent;
-}
-
-html {
-  scroll-snap-type: y mandatory;
-}
-
-section  {
-  scroll-snap-align: start;
-}
-    
-::selection {
-  background-color: transparent; /* Set the background color to transparent */
-  color: inherit; /* Inherit the color of the text */
-}
-
-/* Navigation Bar */
+/*=============================================================================================================================================================================================*/
 
 nav{
   position: fixed;
@@ -53,16 +29,16 @@ nav{
   background: #8B083A;
   z-index: 1;
 }
+
 nav .nav-content{
-  height: 100%;
-  max-width: 1200px;
   display: flex;
-  align-items: center
+  align-items: center;
 }
 
 .nav-content .nav-links{
   display: flex;
-  height: 32.8px;
+  height: 32px;
+  padding: 0px;
 }
 
 .nav-content .nav-links li{
@@ -71,47 +47,22 @@ nav .nav-content{
 }
 .nav-links li a {
   color: #FEC00B;
-  font-family: 'Koulen';
-  font-weight: 500;
-  padding: 23.6px 18px; /* Adjusted padding */
+  font-family: koulen;
+  padding: 23.6px;
   transition: all 0.3s ease;
   text-decoration: none;
   position: relative;
-  left: -44.8px;
-  font-size: 16.2px;
+  font-size: 16px;
   letter-spacing: 0.5px;
 }
 
 .nav-links li a:hover {
-  background-color:#2A0916; /* Highlight effect */
+  background-color:#2A0916;
 }
 
 .nav-links {
-    position: absolute;
-    left: 300px;
-}
-
-/* ===================== */
-
-/* Landing Page */
-
-.HeadlineContainer {
-  height: 953px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #1c1c1c;
-}
-
-.Thingy {
-  position: relative;
-  max-width: 1920px;
-  width: 100%;
-  height: 953px;
-  overflow: visible;
-  background-color: #1c1c1c;
-  z-index: 0;
+  position: absolute;
+  left: 300px;
 }
 
 #Headline {
@@ -120,1126 +71,152 @@ nav .nav-content{
 }
 
 #RbLogo {
-    position: absolute;
-    top: 3.6px;
-    height: 63px;
-    left: 9px;
-
+  position: absolute;
+  top: 3.6px;
+  height: 63px;
+  left: 9px;
 }
 
 #RbText {
-    position: absolute;
-    top: 9px;
-    height: 54px;
-    left: 90px;
-
+  position: absolute;
+  top: 9px;
+  height: 54px;
+  left: 90px;
 }
 
 #MenuButton {
   position: absolute;
   height: 50px;
   top: 56%;
-  left: 74.5%;
+  left: 75%;
   transform: translate(-50%, -50%);
 }
 
-#RbHeadline {
-  position: absolute;
-  height: 220px;
-  top: 120px;
-  left: 45px;
-  filter: drop-shadow(5px 5px 5px #000000);
-  z-index: 3;
-}
 
-#HeadlineDescription {
-  position: absolute;
-  top: 360px;
-  left: 45px;
-  width: 45%;
-  color: white;
-  font-family: Koulen;
-  filter: drop-shadow(5px 5px 5px #000000);
-  font-size: 24px;
-  letter-spacing: 0.5px;
-  z-index: 3;
-}
+/*=============================================================================================================================================================================================*/
 
-#OrderButton {
-  position: absolute;
-  height: 135px;
-  top: 540px;
-  left: 23.4px;
-  z-index: 3;
-}
-
-#FbLink {
-  position: absolute;
-  height: 90px;
-  top: 720px;
-  left: 45px;
-  z-index: 3;
-}
-
-#FbLinkHover {
-  position: absolute;
-  height: 90px;
-  top: 720px;
-  left: 45px;
-  opacity: 0;
-  transition: all 0.2s ease;
-  z-index: 3;
-}
-
-#FbLinkHover:hover {
-  position: absolute;
-  height: 90px;
-  top: 720px;
-  left: 45px;
-  opacity: 1;
-  z-index: 3;
-}
-
-#IgLink {
-  position: absolute;
-  height: 90px;
-  top: 720px;
-  left: 144px;
-  z-index: 3;
-}
-
-#IgLinkHover {
-  position: absolute;
-  height: 90px;
-  top: 720px;
-  left: 144px;
-  opacity: 0;
-  transition: all 0.2s ease;
-  z-index: 3;
-}
-
-#IgLinkHover:hover {
-  position: absolute;
-  height: 90px;
-  top: 720px;
-  left: 144px;
-  opacity: 1;
-  z-index: 3;
-} 
-
-#TTLink {
-  position: absolute;
-  height: 90px;
-  top: 720px;
-  left: 243px;
-  z-index: 3;
-}
-
-#TTLinkHover {
-  position: absolute;
-  height: 90px;
-  top: 720px;
-  left: 243px;
-  opacity: 0;
-  transition: all 0.2s ease;
-  z-index: 3;
-}
-
-#TTLinkHover:hover {
-  position: absolute;
-  height: 90px;
-  top: 720px;
-  left: 243px;
-  opacity: 1;
-  z-index: 3;
-} 
-
-#Follow {
-  position: absolute;
-  font-size: 24px;
-  font-family: Koulen;
-  color: #FEC00B;
-  filter: drop-shadow(5px 5px 5px #000000);
-  top: 720px;
-  left: 350px;
-  z-index: 3;
-
-}
-
-/* ===================== */
-
-/* Scrollbar */
-
-::-webkit-scrollbar {
-  width: 1vw;
-}
-
-::-webkit-scrollbar-track {
-  background: #444444; 
-}
- 
-::-webkit-scrollbar-thumb {
-  background: #888; 
-}
-
-/* ===================== */
-
-/* Reviews and Feedback Section */
-
-#ReviewsHeader {
-  color: white;
-  font-family: Koulen;
-  filter: drop-shadow(5px 5px 5px #000000); 
-  font-family: Koulen;
-  text-align: center;
-  padding-top: 45px;
-  font-size: 18px;
-  letter-spacing: 0.5px;
-}
-
-#ReviewsText1 {
-  font-family: Koulen;
-  color: white;
-  filter: drop-shadow(5px 5px 5px #000000);
-  padding-left: 108px;
-  padding-bottom: 180px;
-  font-size: 18px;
-  letter-spacing: 0.5px;
-}
-
-#Review1Pic {
-  position: absolute;
-  width: 90px;
-  height: 90px;
-  left: 108px;
-  bottom: 400px;
-}
-
-#ReviewUser1 {
-  position: absolute;
-  bottom: 445PX;
-  left: 57px;
-  font-family: Koulen;
-  color: white;
-  filter: drop-shadow(5px 5px 5px #000000);
-  font-size: 14.4px;
-  letter-spacing: 0.5px;
-}
-
-#ReviewStars1 {
-  position: absolute;
-  bottom: 430px;
-  left: 209px;
-  filter: drop-shadow(5px 5px 5px #000000);
-  width: 135px;
-}
-
-#ReviewTime1 {
-  position: absolute;
-  bottom: 385px;
-  left: 57px;
-  font-family: Koulen;
-  color: white;
-  filter: drop-shadow(5px 5px 5px #000000);
-  font-size: 14.4px;
-  letter-spacing: 0.5px;
-}
-
-.modal-image {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-  width: 20%;
-}
-
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: hidden; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-
-/* Modal Content (image) */
-.modal-content {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: auto;
-  display: block;
-  width: 100%;
-  max-width: 500px;
-
-}
-
-.modal-content {  
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.3s;
-  animation-name: zoom;
-  animation-duration: 0.3s;
-}
-
-@-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-  from {transform:scale(0) translate(-50%, -50%); transform-origin: top} 
-  to {transform:scale(1) translate(-50%, -50%); transform-origin: top;}
-}
-
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 80px;
-  font-weight: bold;
-  transition: 0.3s;
-  z-index: 1;
-
-}
-
-.close:hover, .close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-  .modal-content {
-    width: 100%;
-  }
-}
-
-#RPic1 {
-  position: absolute;
-  width: 180px;
-  top: 230px;
-  left: 108px;
-
-}
-#RPic2 {
-  position: absolute;
-  width: 180px;
-  top: 230px;
-  left: 297px;
-}
-
-#RPic3 {
-  position: absolute;
-  width: 180px;
-  top: 230px;
-  left: 486px;
-
-} 
-
-
-
-/* ===================== */
-
-/* About Us Page */
-
-#AboutUs {
-  width: 100%;
-  height: 953px;
-}
-
-#AboutUsHeader {
-  position: absolute;
-  top: 200px;
-  left: 300px;
-  font-family: Koulen;
-  height: auto;
-  width: auto;
-  color: #FEC00B;
-  font-size: 45px;
-  line-height: 1.3;
-  letter-spacing: 0.5px;
-}
-
-#AboutUsDescription {
-  position: absolute;
-  top: 350px;
-  left: 300px;
-  width: 30%;
-  height: auto;
-  font-family: Koulen;
-  color: white;
+#reviews-text-1 {
   font-size: 21px;
-  letter-spacing: 0.5px;
-
-}
-
-#AboutUsPhoto {
-  position: absolute;
-  top: 150px;
-  width: 450px;
-  height: auto;
-  left: 1050px;
-}
-
-/*=============================================================================================================================================================================================*/
-
-@media (min-width: 320px) and (max-width: 480px) {
-
-html {
-  scroll-snap-type: unset;
-}
-
-.nav-links li a {
-  display: none;
-}
-
-nav {
-  padding: 31px;;
-}
-
-#RbLogo {
-  height: 55px;
-  top: 50%;
-  left: 11%;
-  transform: translate(-50%, -50%);
-}
-
-#RbText {
-  height: 50px;
-  top: 50%;
-  left: 43%;
-  transform: translate(-50%, -50%);
-}
-
-#M1 {
-  position: absolute;
-  top: 46%;
-  max-width: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#RbHeadline {
-  position: absolute;
-  width:unset;
-  height: unset;
-  max-height: 90%;
-  max-width: 90%;
-  top: 13%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#HeadlineDescription {
-  font-size: 12px;
-  width: 90%;
-  text-align: justify;
-  top: 24%;
-  left: 50%;
-  letter-spacing: 0.5px;
-  margin: 0px;
-  padding: 0px;
-  transform: translate(-50%, -50%);
-}
-
-#OrderButton {
-  height: unset;
-  max-width: 80%;
-  top: 33%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#FbLink, #FbLinkHover, #FbLinkHover:hover{
-  height: unset;
-  max-width: 20%;
-  top: 80%;
-  left: 29%;
-  transform: translate(-50%, -50%);
-}
-
-#IgLink, #IgLinkHover, #IgLinkHover:hover {
-  height: unset;
-  max-width: 20%;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#TTLink, #TTLinkHover, #TTLinkHover:hover {
-  height: unset;
-  max-width: 20%;
-  top: 80%;
-  left: 71%;
-  transform: translate(-50%, -50%);
-}
-
-#Follow {
-  font-size: 18px;
-  top: 72%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.banner {
-  display: none;
-}
-
-#RPic1 {
-  position: absolute;
-  width: unset;
-  max-width: 28%;
-  top: 80%;
-  left: 20%;
-  transform: translate(-50%, -50%);
-}
-
-#RPic2 {
-  position: absolute;
-  width: unset;
-  max-width: 28%;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#RPic3 {
-  position: absolute;
-  width: unset;
-  max-width: 28%;
-  top: 80%;
-  left: 80%;
-  transform: translate(-50%, -50%);
-} 
-
-#ReviewsText1 {
-  position: absolute;
-  font-size: 12px;
-  width: 85%;
-  text-align: justify;
-  padding: 0px;
-  top: 24%;
-}
-
-#Review1Pic {
-  width: 70px;
-  height: 70px;
-  top: 11%;
-  left: 18%;
-  transform: translate(-50%, -50%);
-}
-
-#ReviewUser1 {
-  top: 4%;
-  left: 45%;
-  font-size: 12px;
-  transform: translate(-50%, -50%);
-}
-
-#ReviewStars1 {
-  top: 11.5%;
-  left: 45%;
-  font-size: 12px;
-  transform: translate(-50%, -50%);
-  width: 95px;
-}
-
-#ReviewTime1 {
-  top: 13.5%;
-  left: 45%;
-  width: 84px;
-  font-size: 12px;
-  padding: 0px;
-  transform: translate(-50%, -50%);
-}
-
-#AboutUsPhoto {
-  top: 27%;
-  width: unset;
-  max-width: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#AboutUsHeader {
-  top: 53%;
-  left: 50%;
-  width: 80%;
-  font-size: 18px;
-  transform: translate(-50%, -50%);
-  text-align: justify;
-}
-
-#AboutUsDescription {
-  top: 76%;
-  left: 50%;
-  font-size: 12px;
-  width: 80%;
-  transform: translate(-50%, -50%);
-  margin: 0px;
-  padding: 0px;
-  text-align: justify;
-  box-sizing: border-box;
-}
-
-
-
-}
-
-
-/*=============================================================================================================================================================================================*/
-
-@media (min-width: 335px) and (max-width: 374px) {
-
-#AboutUsPhoto {
-  top: 27%;
-}
-
-#AboutUsHeader {
-  top: 54%;
-}
-
-#AboutUsDescription {
-  top: 76%;
-}  
-
-}
-
-@media (min-width: 360px) and (max-width: 374px) {
-
-#AboutUsPhoto {
-  top: 28%;
-}
-
-#AboutUsHeader {
-  top: 56%;
-}
-
-#AboutUsDescription {
-  top: 78%;
-}  
-
-}
-
-@media (min-width: 361px) and (max-width: 374px) {
-
-#AboutUsHeader {
-  top: 57%;
-}
-
-}
-
-@media (min-width: 375px) and (max-width: 424px) {
-
-#M1 {
-  top: 50%;
-}
-
-#RbHeadline {
-  top: 14%;
-}
-
-#HeadlineDescription {
-  top: 26%;
-  font-size: 14px;
-}
-
-#OrderButton {
-  top: 35%;
-}
-
-#FbLink, #FbLinkHover, #FbLinkHover:hover{
-  top: 85%;
-}
-
-#IgLink, #IgLinkHover, #IgLinkHover:hover {
-  top: 85%;
-}
-
-#TTLink, #TTLinkHover, #TTLinkHover:hover {
-  top: 85%;
-} 
-
-#Follow {
-  top: 77%;
-  font-size: 20px;
-}
-
-#MenuButton {
-  left: 76.5%;
-}
-
-#ReviewsText1 {
-  font-family: Koulen;
+  font-family: koulen;
   color: white;
-  filter: drop-shadow(5px 5px 5px #000000);
-  font-size: 12px;
-  width: 85%;
-  text-align: justify;
+}
+.image2 {
+  margin: 10px;
+}
+
+.review-1-grid {
+  padding-left: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.review-1-grid-item-1 {
+  display: flex;
+  justify-content: flex-end;
+}
+.review-1-grid-item-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+#reviews-image-1 {
   padding: 0;
-  letter-spacing: 0.5px;
 }
 
-#ReviewUser1 {
-  top: 4%;
-  left: 43%;
-  font-size: 12px;
-  transform: translate(-50%, -50%);
-}
-
-#ReviewStars1 {
-  top: 11.5%;
-  left: 43%;
-  font-size: 12px;
-  transform: translate(-50%, -50%);
-  width: 95px;
-}
-
-#ReviewTime1 {
-  top: 13.5%;
-  left: 43%;
-  width: 84px;
-  font-size: 12px;
-  padding: 0px;
-  transform: translate(-50%, -50%);
-}
-
-#AboutUs {
-  height: 1080px;
-}
-
-#AboutUsPhoto {
-  top: 32%;
-}
-
-#AboutUsHeader {
-  top: 62%;
-  font-size: 20px;
-}
-
-#AboutUsDescription {
-  top: 88%;
-  font-size: 14px;
-}
-
-}
-
-/*=============================================================================================================================================================================================*/
-
-@media (min-width: 386px) and (max-width: 425px) {
-
-#AboutUsHeader {
-  top: 63.5%;
-}
-
-}
-
-/*=============================================================================================================================================================================================*/
-
-@media (min-width: 415px) and (max-width: 425px) {
-
-#AboutUsHeader {
-  top: 64.5%;
-}
-
-}
-
-/*=============================================================================================================================================================================================*/
-
-@media (min-width: 425px) and (max-width: 480px) {
-
-#Headline {
-  height: 1080px;
-}
-
-#M1 {
-  top: 60%;
-}
-
-#RbHeadline {
-  top: 16%;
-}
-
-#HeadlineDescription {
-  top: 30%;
-  font-size: 16px;
-}
-
-#OrderButton {
-  top: 42%;
-}
-
-#FbLink, #FbLinkHover, #FbLinkHover:hover{
-  top: 104%;
-}
-
-#IgLink, #IgLinkHover, #IgLinkHover:hover {
-  top: 104%;
-}
-
-#TTLink, #TTLinkHover, #TTLinkHover:hover {
-  top: 104%;
-} 
-
-#Follow {
-  top: 94%;
-  font-size: 22px;
-}
-
-#MenuButton {
-  left: 77.8%;
-}
-
-#RPic1 {
-  top: 84%;
-}
-#RPic2 {
-  top: 84%;
-}
-
-#RPic3 {
-  top: 84%;
-} 
-
-#ReviewsText1 {
-  font-family: Koulen;
+#reviewer-1 {
+  font-size: 21px;
+  font-family: koulen;
   color: white;
-  filter: drop-shadow(5px 5px 5px #000000);
-  font-size: 13px;
-  width: 85%;
-  text-align: justify;
   padding: 0;
-  letter-spacing: 0.5px;
-}
-
-#ReviewUser1 {
-  top: 4%;
-  left: 40.5%;
-  font-size: 13px;
-  transform: translate(-50%, -50%);
-}
-
-#ReviewStars1 {
-  top: 12%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  width: 95px;
-}
-
-#ReviewTime1 {
-  top: 13.5%;
-  left: 40%;
-  width: 84px;
-  font-size: 13px;
-  padding: 0px;
-  transform: translate(-50%, -50%);
-}
-
-#AboutUs {
-  height: 1440px;
-}
-
-#AboutUsPhoto {
-  top: 35%;
-}
-
-#AboutUsHeader {
-  top: 70%;
-  font-size: 22px;
-}
-
-#AboutUsDescription {
-  top: 100%;
-  font-size: 16px;
-}
-
-}
-
-/*=============================================================================================================================================================================================*/
-
-@media (min-width: 436px) and (max-width: 480px) {
-  #AboutUsHeader {
-  top: 71%;
-  font-size: 22px;
-}
-
-}
-
-/*=============================================================================================================================================================================================*/
-
-@media (min-width: 469px) and (max-width: 480px) {
-  #AboutUsHeader {
-  top: 72%;
-  font-size: 22px;
-}
-
-}
-
-/*=============================================================================================================================================================================================*/
-
-@media (min-width: 481px) and (max-width: 768px) {
-.banner {
-  display: none;
-}
-
-#Headline{
-  height: 1280px;
-}
-
-html {
-  scroll-snap-type: unset;
-}
-
-.nav-links li a {
-  display: none;
-}
-
-nav {
-  padding: 31px;;
-}
-
-#RbLogo {
-  height: 55px;
-  top: 50%;
-  left: 11%;
-  transform: translate(-50%, -50%);
-}
-
-#RbText {
-  height: 50px;
-  top: 50%;
-  left: 43%;
-  transform: translate(-50%, -50%);
-}
-
-#RbHeadline {
-  position: absolute;
-  width:unset;
-  height: unset;
-  max-height: 90%;
-  max-width: 90%;
-  top: 16%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#HeadlineDescription {
-  font-size: 18px;
-  width: 90%;
-  text-align: justify;
-  top: 32%;
-  left: 50%;
-  letter-spacing: 0.5px;
   margin: 0px;
-  padding: 0px;
-  transform: translate(-50%, -50%);
+  margin-left: 10px;
 }
 
-#OrderButton {
-  height: unset;
-  max-width: 80%;
-  top: 44%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#M1 {
-  position: absolute;
-  top: 65%;
-  max-width: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#Follow {
-  font-size: 24px;
-  top: 105%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#FbLink, #FbLinkHover, #FbLinkHover:hover{
-  height: unset;
-  max-width: 20%;
-  top: 115%;
-  left: 29%;
-  transform: translate(-50%, -50%);
-}
-
-#IgLink, #IgLinkHover, #IgLinkHover:hover {
-  height: unset;
-  max-width: 20%;
-  top: 115%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#TTLink, #TTLinkHover, #TTLinkHover:hover {
-  height: unset;
-  max-width: 20%;
-  top: 115%;
-  left: 71%;
-  transform: translate(-50%, -50%);
-}
-
-.testimonial {
-  height: 700px;
-}
-
-#ReviewsText1 {
-  position: absolute;
-  font-size: 18px;
-  width: 85%;
-  text-align: justify;
-  padding: 0px;
-  top: 24%;
-}
-
-#Review1Pic {
-  width: 100px;
-  height: 100px;
-  top: 11%;
-  left: 18%;
-  transform: translate(-50%, -50%);
-}
-
-#ReviewUser1 {
-  top: 12.5%;
-  left: 45%;
-  font-size: 18px;
-  transform: translate(-50%, -50%);
-}
-
-#ReviewStars1 {
-  top: 11.5%;
-  left: 45%;
-  transform: translate(-50%, -50%);
-  width: 135px;
-}
-
-#ReviewTime1 {
-  top: 20%;
-  left: 45%;
-  width: 120px;
-  font-size: 18px;
-  padding: 0px;
-  transform: translate(-50%, -50%);
-}
-
-#RPic1 {
-  position: absolute;
-  width: unset;
-  max-width: 28%;
-  top: 80%;
-  left: 20%;
-  transform: translate(-50%, -50%);
-}
-
-#RPic2 {
-  position: absolute;
-  width: unset;
-  max-width: 28%;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#RPic3 {
-  position: absolute;
-  width: unset;
-  max-width: 28%;
-  top: 80%;
-  left: 80%;
-  transform: translate(-50%, -50%);
-} 
-
-#AboutUs {
-  height: 1440px;
-}
-
-#AboutUsPhoto {
-  top: 40%;
-  width: unset;
-  max-width: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#AboutUsHeader {
-  top: 80%;
-  left: 50%;
-  width: 80%;
-  font-size: 24px;
-  transform: translate(-50%, -50%);
-  text-align: justify;
-}
-
-#AboutUsDescription {
-  top: 115%;
-  left: 50%;
-  font-size: 18px;
-  width: 80%;
-  transform: translate(-50%, -50%);
+#review-stars {
+  width: 140px;
   margin: 0px;
-  padding: 0px;
-  text-align: justify;
-  box-sizing: border-box;
-}
-
-
-
+  margin-left: 5px;
 }
 
 /*=============================================================================================================================================================================================*/
 
-@media (min-width: 769px) and (max-width: 1024px) {
-
-#MenuButton {
-  display: none;
-}  
-
-.MobileBanner {
-display: none;
+.aboutus-container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    height: 953px;
+          
 }
 
+body {
+    background-color: #1c1c1c;
 }
 
-/*=============================================================================================================================================================================================*/
+@media (min-width: 320px) {
 
-@media (min-width: 1025px) and (max-width: 1440px) {
-
-#MenuButton {
-display: none;
-} 
-
-.MobileBanner {
-display: none;
+.aboutus-item-1, .aboutus-item-2 {
+    margin-left: 0px;
+    margin-top: 0px;
+}
 }
 
+@media (min-width: 768px) {
+.aboutus-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
 }
 
-/*=============================================================================================================================================================================================*/
 
-@media (min-width: 1400px) {
-
-#MenuButton {
-display: none;
+@media (min-width: 1024px) {
+.aboutus-container {
+    gap: 24px;
+}
 }
 
-.MobileBanner {
-display: none;
+.aboutus-item-1 {
+    margin-left: 150px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+.aboutus-header {
+    font-family: koulen;
+    color: #FEC00B;
+    filter: drop-shadow(5px 5px 5px #000000);
+    font-size: 48px;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+.aboutus-body {
+    font-family: koulen;
+    color: white;
+    filter: drop-shadow(5px 5px 5px #000000);
+    font-size: 26px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+.aboutus-item-2 {
+    margin-left: 50px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutus-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 /*=============================================================================================================================================================================================*/
@@ -1273,147 +250,178 @@ display: none;
 
 /*=============================================================================================================================================================================================*/
 
-.banner {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-  max-height: 953px;
-}
-.banner-img {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background: no-repeat 50% 50%;
-	background-size: cover;
-	animation: animate 10s linear infinite;
-	opacity: 1;
-	transform: scale(1);
-}
-.banner-img:nth-child(1) {
-	animation-name: animate-1;
-	z-index: 3;
-}
-.banner-img:nth-child(2) {
-	animation-name: animate-2;
-	z-index: 2;
-}
-.banner-img:nth-child(3) {
-	animation-name: animate-3;
-	z-index: 1;
-}
-@keyframes animate-1 {
-	0% {
-		opacity: 1;
-	}
-	33% {
-		opacity: 1;
-	}
-	36% {
-		opacity: 0;
-	}
-	66% {
-		opacity: 0;
-	}
-	97% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-@keyframes animate-2 {
-	36% {
-		opacity: 1;
-	}
-	66% {
-		opacity: 1;
-	}
-	69% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 0;
-	}
-}
-@keyframes animate-3 {
-	69% {
-		opacity: 1;
-	}
-	97% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
+@media (min-width: 320px) and (max-width: 767px) {
+html {
+  scroll-snap-type: unset;
 }
 
-</style>
+.nav-links li a {
+  display: none;
+}
 
+nav {
+  padding: 31px;;
+}
+
+#RbLogo {
+  height: 55px;
+  top: 50%;
+  left: 25%;
+  transform: translate(-160%, -50%);
+}
+
+#RbText {
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-66%, -50%);
+}
+
+.review-1-grid {
+  padding-left: 20px;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+}
+
+#reviews-image-1 {
+  width: 20vw;
+  height: unset;
+  padding: 0;
+}
+
+#reviewer-1 {
+  font-size: 4.5vw;
+  padding: 0;
+  margin: 0px;
+  text-align: center;
+}
+
+#review-stars {
+  width: 31vw;
+  margin: 0px;
+}
+
+.testimonial .image2 {
+  width: unset;
+  max-width: 29%;
+  margin: 5px;
+}
+
+#reviews-text-1 {
+  font-size: 4.5vw;
+  font-family: koulen;
+  color: white;
+  text-align: justify;
+}
+
+.testimonial .slidephotos { 
+  width: auto;
+  padding: 0px;
+  padding: 0px 10px 0px 10px;
+  box-sizing: border-box;
+  justify-content: space-evenly;
+}
+
+/*=============================================================================================================================================================================================*/
+
+.aboutus-container{
+  gap: 25px;
+}
+
+.aboutus-item-1 {
+    order: 2;
+    margin: 0;
+    justify-content: unset;
+} 
+
+.aboutus-item-2 {
+    order: 1;
+    margin: 0;
+    justify-content: unset;
+    align-items: unset;
+}
+
+.aboutus-header {
+    font-size: 7vw;
+    margin: 0;
+    margin-left: 15px;
+    width: 90%;
+}
+
+.aboutus-body {
+    font-size: 4.5vw;
+    margin-left: 15px;
+    width: 92%;
+    text-align: justify;
+}
+
+.aboutus-image {
+    width: 100%;
+    max-width: unset;
+}
+}
+
+@media (min-width: 768px) {
+  #MenuButton { 
+    display: none;
+}
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+
+.aboutus-item-1 {
+    order: 1;
+    margin: 0;
+} 
+
+.aboutus-item-2 {
+    order: 2;
+    margin: 0;
+}
+
+.aboutus-header {
+
+}
+
+.aboutus-body {
+
+}
+}
+
+
+
+
+
+    </style>
 </head>
 
 <body>
-        <nav>
-            <div class="nav-content">
-                    <img id="MenuButton" src="MenuButton.png" alt="" onclick="toggleSidebar()">
-                    <img id="RbLogo" src="RetrobitesLogoTransparent.png">
-                    <img id="RbText" src="RbTextLogoFinal.png">
-            <div class="logo">
-              <a href="#"></a>
-            </div>
-          
-            <ul class="nav-links">
-              <li><a href="">Home</a></li>
-              <li><a href="RetrobitesMenu.html">Menu</a></li>
-              <li><a href="RetrobitesDelivery.html">Delivery</a></li>
-              <li><a href="#">Locations</a></li>
-            </ul>
-          </div>
-        </nav>
 
-        <section id="Headline">
+    <nav>
+        <div class="nav-content">
+                <img id="MenuButton" src="MenuButton.png" alt="" onclick="toggleSidebar()">
+                <img id="RbLogo" src="RetrobitesLogoTransparent.png">
+                <img id="RbText" src="RbTextLogoFinal.png">
+        <div class="logo">
+          <a href="#"></a>
+        </div>
+      
+        <ul class="nav-links">
+          <li><a href="">Home</a></li>
+          <li><a href="RetrobitesMenu.html">Menu</a></li>
+          <li><a href="RetrobitesDelivery.html">Delivery</a></li>
+          <li><a href="RetrobitesLocations.html">Locations</a></li>
+        </ul>
+        <ul class="sidebar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="RetrobitesMenu.html">Menu</a></li>
+          <li><a href="RetrobitesDelivery.html">Delivery</a></li>
+          <li><a href="RetrobitesLocations.html">Locations</a></li>
+        </ul>
+      </div>
+    </nav>
 
-          <div class="HeadlineContainer">
-            <div class="Thingy">
-
-          <div class="banner">
-            <div class="banner-img"> <img id="S1" src="LandingPagePizzaB2.png" alt=""></div>
-            <div class="banner-img"> <img id="S1" src="LandingPageBurgerB2.png" alt=""></div>
-            <div class="banner-img"> <img id="S1" src="LandingPageWingsB2.png" alt=""></div>
-          </div>
-
-          <div class="MobileBanner">
-            <div class="banner-img"> <img id="M1" src="LandingPagePizzaM.png" alt=""></div>
-            <div class="banner-img"> <img id="M1" src="LandingPageBurgerM.png" alt=""></div>
-            <div class="banner-img"> <img id="M1" src="LandingPageWingsM.png" alt=""></div>
-          </div>
-
-          <img id="RbHeadline" src="RbTextHomepage.png">
-
-          <p id="HeadlineDescription">Discover Deliciousness at Retrobites Burger Kartel Unlimited. 
-            Dine in and try our unlimited all you can eat packages or try our ala carte menu items when you buy takeout or order for delivery  </p>
-           
-          <img id="OrderButton"  src="RbOrderButton.png">
-
-          <a href="https://www.facebook.com/profile.php?id=61553779395919" target ="_blank"> 
-            <img id="FbLink" src="RbFacebookIconYellowRedBG.png"> 
-            <img id="FbLinkHover" src="RbFacebookIconYellowRedBGHover.png">
-          </a>
-          
-            <img id="IgLink" src="RbInstagramIconYellowRedBG.png">
-            <img id="IgLinkHover" src="RbInstagramIconYellowRedBGHover.png">
-
-            <img id="TTLink" src="RbTiktokIconYellowRedBG.png">
-            <img id="TTLinkHover" src="RbTiktokIconYellowRedBGHover.png">
-
-            <p id="Follow">follow us</p>
-
-            </div>
-          </div>
-
-      </section>
-
-      <section class="container">
+    <section class="container">
 
         <div class="testimonial mySwiper">
           
@@ -1421,25 +429,33 @@ display: none;
   
             <div class="slide swiper-slide">
 
-              <img src="Review1Pic.png" id="Review1Pic" class="image" />
+            <div class="review-1-grid">
 
-              <p id="ReviewUser1"> Cyrus Jaciel Gal</p>
+              <div class="review-1-grid-item-1">
+              <img id="reviews-image-1" src="Review1Pic.png" class="image">
+              </div>
+              
+              <div class="review-1-grid-item-2">
+              <p id="reviewer-1"> Cyrus Jaciel Gal</p>
+              <img id="review-stars" src="ReviewStars.png" alt="">
+              </div>
 
-              <img id="ReviewStars1" src="ReviewStars.png">
+            </div>
 
-              <p id="ReviewTime1"> a year ago</p>
-
-              <p id="ReviewsText1">
+              <p id="reviews-text-1">
                 We tried their ultimate unlimited package wherein we had an unlimited burger. 
                 The food was great and superb. We are very full. The owner and the crew are very kind and accommodating. 
                 The place is not that high-end and need some maintenance to attract more customers. 
                 Overall, our experience was great since the food were delicious especially the Takoyaki and Burger.
               </p>
 
-              <img class="modal-image" id="RPic1" src="ReviewsP1.png" data-large-src="ReviewsP1.png">
-              <img class="modal-image" id="RPic2" src="ReviewsP2.png" data-large-src="ReviewsP2.png">
-              <img class="modal-image" id="RPic3" src="ReviewsP3.png" data-large-src="ReviewsP3.png">
-    
+              <div class="slidephotos">
+              <img id="RPic1" src="ReviewsP1.png" data-large-src="ReviewsP1.png" class="image2">
+              <img id="RPic2" src="ReviewsP2.png" data-large-src="ReviewsP2.png" class="image2">
+              <img id="RPic3" src="ReviewsP3.png" data-large-src="ReviewsP3.png" class="image2">
+              </div>
+
+
             </div>
   
             <div class="slide swiper-slide">
@@ -1480,83 +496,55 @@ display: none;
           <div class="swiper-button-prev nav-btn"></div>
           <div class="swiper-pagination"></div>
         </div>
+
+        <!-- Swiper JS -->
+        <script src="js/swiper-bundle.min.js"></script>
   
-      </section>
-
-      <div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
-      </div>
+        <!-- JavaScript -->
+        <script src="js/script.js"></script>
   
-      <!-- Swiper JS -->
-      <script src="js/swiper-bundle.min.js"></script>
-  
-      <!-- JavaScript -->
-      <script src="js/script.js"></script>
+    </section>
 
-<!--=============================================================================================================================================================================================-->
 
-      <section id="AboutUs">
-      
-      <div class="HeadlineContainer">
-          
-        <div class="Thingy">
 
-        <div class="AboutUsElements"> 
-          <img id="AboutUsPhoto" src="LrEditRbAboutUsPhotoPs2.png" alt=""> 
+    <div class="aboutus-container">   
+
+        <div class="aboutus-item-1"> 
+            <h1 class="aboutus-header">
+                about us - retrobites burger kartel unlimited
+            </h1>
+
+            <p class="aboutus-body">
+                Welcome to Retrobites Burger Kartel Unlimited! Step into our 
+                culinary kartel, where we have been serving customers delicious
+                and affordable food since 2022. Our menu doesn't just only offer 
+                burgers, but also offer many of your favorite comfort foods
+                such as chicken wings, french fries, takoyaki, pizza and more! 
+                All with many different flavors to choose from! Select from our 
+                unlimited all you can eat packages when you dine in or order 
+                ala carte when you take out or order for delivery. Come visit us here 
+                at our main branch at Retrobites in Taguig City or at our newly
+                franchised location at Jazzy n' Jin Foobhub in Mabalacat City.
+            </p>
         </div>
 
-        <div class="AboutUsElements"> 
-          <p id="AboutUsHeader">about us - retrobites burger <br> karterl unlimited</p>  
+        <div class="aboutus-item-2">
+            <img class="aboutus-image" src="LrEditRbAboutUsPhotoPs2.png"> 
         </div>
 
-        <div class="AboutUsElements"> 
-          <p id="AboutUsDescription">
-          Welcome to Retrobites Burger Kartel Unlimited! Step into our 
-          culinary kartel, where we have been serving customers delicious
-          and affordable food since 2022. Our menu doesn't just only offer 
-          burgers, but also offer many of your favorite comfort foods
-          such as chicken wings, french fries, takoyaki, pizza and more! 
-          All with many different flavors to choose from! Select from our 
-          unlimited all you can eat packages when you dine in or order 
-          ala carte when you take out or order for delivery. Come visit us here 
-          at our main branch at Retrobites in Taguig City or at our newly
-          franchised location at Jazzy n' Jin Foobhub in Mabalacat City. </p>  
-        </div>
+    </div>
 
-        </div>
-
-      </div>
-      
-      </section>
-
-<!--=============================================================================================================================================================================================-->
-
-      <script>
-        // Get the modal
-        var modal = document.getElementById("myModal");
-        
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
-        var modalImg = document.getElementById("img01");
-        
-        // Attach click event to all images with class "modal-image"
-        var images = document.querySelectorAll('.modal-image');
-        images.forEach(function(img) {
-          img.onclick = function(){
-            modal.style.display = "block";
-            modalImg.src = this.dataset.largeSrc; // Use the data-large-src attribute for the larger image
+    <script>
+      function toggleSidebar() {
+          const sidebar = document.querySelector('.sidebar');
+          if (sidebar.style.display === 'none' || sidebar.style.display === '') {
+              sidebar.style.display = 'flex';
+          } else {
+              sidebar.style.display = 'none';
           }
-        });
-        
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-        
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() { 
-          modal.style.display = "none";
-        }
-        </script>
-        
+      }
+    </script>
+
 </body>
 
 </html>
