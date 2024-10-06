@@ -5,32 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <style>
-         body {
-        background-color: #202020;
-        width: 100%;
-        height: 100%;
-        overflow-x: hidden;
-        margin:0; 
-        padding:0; 
-        box-sizing:border-box;
-        caret-color: transparent;
+<style>
 
+@font-face {
+  font-family: 'koulen';
+  src: url(Koulen-Regular.ttf);
+}
 
-        
-    }
+body {
+  background-color: #202020;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  margin:0; 
+  padding:0; 
+  box-sizing:border-box;
+  caret-color: transparent;      
+}
+
 html {
   scroll-snap-type: y mandatory;
 }
     
-    ::selection {
-    background-color: transparent; /* Set the background color to transparent */
-    color: inherit; /* Inherit the color of the text */
+::selection {
+  background-color: transparent; /* Set the background color to transparent */
+  color: inherit; /* Inherit the color of the text */
 }
-
-  /* Google Font Import Link */
-  @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
-
 
 nav{
   position: fixed;
@@ -41,16 +41,16 @@ nav{
   background: #8B083A;
   z-index: 1;
 }
+
 nav .nav-content{
-  height: 100%;
-  max-width: 1200px;
   display: flex;
   align-items: center
 }
 
 .nav-content .nav-links{
   display: flex;
-  height: 32.8px;
+  height: 32px;
+  padding: 0px;
 }
 
 .nav-content .nav-links li{
@@ -59,61 +59,234 @@ nav .nav-content{
 }
 .nav-links li a {
   color: #FEC00B;
-  font-family: 'Koulen';
-  font-weight: 500;
-  padding: 23.6px 18px; /* Adjusted padding */
+  font-family: koulen;
+  padding: 23.6px;
   transition: all 0.3s ease;
   text-decoration: none;
   position: relative;
-  left: -44.8px;
-  font-size: 16.2px;
+  font-size: 16px;
   letter-spacing: 0.5px;
-
 }
 
 .nav-links li a:hover {
-  background-color:#2A0916; /* Highlight effect */
-}
-
-#RbLogo {
-    position: fixed;
-    top: 3.6px;
-    height: 63px;
-    left: 9px;
-
-}
-
-#RbText {
-    position: absolute;
-    top: 9px;
-    height: 54px;
-    left: 90px;
-
+  background-color:#2A0916;
 }
 
 .nav-links {
-    position: absolute;
-    left: 300px;
-}
-
-/* ===================== */
-
-#DeliveryProcess {
   position: absolute;
-  top: 350px;
-  width: 1750px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 300px;
+}
 
+#RbLogo {
+  position: absolute;
+  top: 3.6px;
+  height: 63px;
+  left: 9px;
+}
+
+#RbText {
+  position: absolute;
+  top: 9px;
+  height: 54px;
+  left: 90px;
+}
+
+#MenuButton {
+  position: absolute;
+  height: 50px;
+  top: 56%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+
+/*=============================================================================================================================================================================================*/
+
+.delivery-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1800px;
+  margin: auto;
+  padding: 0;
+  padding-left: 48px;
+  padding-right: 48px;
+  padding-top: 120px;
+}
+
+.delivery-item-1 {
+  display: flex;
+  object-fit: cover;
+  flex-direction: column;
+  align-items: center;
+}
+
+.delivery-item-1 img {
+  width: 100%;
+}
+
+.delivery-item-1-mobile {
+  display: none;
+}
+
+.delivery-item-2 {
+  display: flex;
+  object-fit: cover;
+  flex-direction: column;
+  align-items: center;
+}
+
+.delivery-item-2 img {
+  width: 100%;
+}
+
+#order-button {
+  width: 33%;
+  margin: 48px;
+}
+
+.order-button-hover {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1800px;
+  padding: 0;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+#order-button-hover {
+  width: 33%;
+  opacity: 0;
+  transition: all 0.2s ease;
+  margin: 48px;
+}
+
+#order-button-hover:hover {
+  width: 33%;
+  opacity: 1;
 }
 
 
-    </style>
+
+/*=============================================================================================================================================================================================*/
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+.nav-links li a {
+  display: none;
+}
+
+nav {
+  padding: 31px;;
+}
+
+#RbLogo {
+  height: 55px;
+  top: 50%;
+  left: 25%;
+  transform: translate(-160%, -50%);
+}
+
+#RbText {
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-66%, -50%);
+}
+
+
+}
+
+/*=============================================================================================================================================================================================*/
+
+@media (min-width: 320px) and (max-width: 1023px) {
+.delivery-container {
+  padding: 0;
+  padding-top: 8vh;
+}
+
+.delivery-item-1 {
+  display: none;
+}
+
+.delivery-item-1-mobile {
+  display: flex;
+  object-fit: cover;
+  justify-content: center;
+}
+
+.delivery-item-1-mobile img {
+  width: 90%;
+}
+
+#order-button {
+  width: 80%;
+
+}
+
+#order-button-hover {
+  width: 80%;
+;
+}
+
+#order-button-hover:hover {
+  width: 80%;
+
+}
+
+.order-button-hover {
+  padding: 0;
+}
+
+}
+
+/*=============================================================================================================================================================================================*/
+
+@media (min-width: 768px) {
+#MenuButton {
+  display: none;
+}
+
+.delivery-container {
+  padding-top: 12vh;
+}
+
+}
+
+.sidebar{
+  position: fixed;
+  top: 42px; 
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #53122B;
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li{
+  width: 100%;
+  left: 10%;
+  font-family: koulen;
+  color: #FEC00B;
+  margin-left: 6.5%;
+  margin-top: 3%;
+}
+.sidebar a{
+  width: 100%;
+  color: #FEC00B;
+  text-decoration: none;
+}
+
+</style>
 
 </head>
 <body>
     <nav>
         <div class="nav-content">
+                <img id="MenuButton" src="MenuButton.png" alt="" onclick="toggleSidebar()">
                 <img id="RbLogo" src="RetrobitesLogoTransparent.png">
                 <img id="RbText" src="RbTextLogoFinal.png">
         <div class="logo">
@@ -124,15 +297,55 @@ nav .nav-content{
           <li><a href="index.html">Home</a></li>
           <li><a href="RetrobitesMenu.html">Menu</a></li>
           <li><a href="RetrobitesDelivery.html">Delivery</a></li>
-          <li><a href="#">Locations</a></li>
+          <li><a href="RetrobitesLocations.html">Locations</a></li>
+        </ul>
+        <ul class="sidebar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="RetrobitesMenu.html">Menu</a></li>
+          <li><a href="RetrobitesDelivery.html">Delivery</a></li>
+          <li><a href="RetrobitesLocations.html">Locations</a></li>
         </ul>
       </div>
     </nav>
-    <section>
-      <img src="DeliveryProcess.png" id="DeliveryProcess" alt="">
+
+    <section class="delivery-main">
+
+      <div class="delivery-container">
+
+        <div class="delivery-item-1">
+          <img id="DeliveryProcess" src="RbOrderingProcess.png" alt="">
+        </div> 
+
+        <div class="delivery-item-1-mobile">
+          <img id="" src="RbOrderingProcessMobile.png">
+        </div>
+          
+        <div class="delivery-item-2">
+          <img id="order-button" src="RbOrderButton-2.png" alt="">
+
+          <div class="order-button-hover">
+            <img id="order-button-hover" src="RbOrderButton-2-hover.png">
+          </div>
+          
+        </div>
 
 
+
+
+
+      </div>
 
     </section>
+    
+    <script>
+      function toggleSidebar() {
+          const sidebar = document.querySelector('.sidebar');
+          if (sidebar.style.display === 'none' || sidebar.style.display === '') {
+              sidebar.style.display = 'flex';
+          } else {
+              sidebar.style.display = 'none';
+          }
+      }
+  </script>
 </body>
 </html>
