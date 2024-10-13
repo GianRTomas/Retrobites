@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retrobites Burger Kartel Unlimited</title>
+    <link rel="icon" type="image/png" href="RetrobitesLogoTransparent.png">
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-
+    <link rel="stylesheet" href="css/style.css" /> 
+    
 <style>
+* {
+  letter-spacing: 1px;
+}
 
 @font-face {
   font-family: 'koulen';
@@ -53,7 +57,6 @@ nav .nav-content{
   text-decoration: none;
   position: relative;
   font-size: 16px;
-  letter-spacing: 0.5px;
 }
 
 .nav-links li a:hover {
@@ -114,6 +117,10 @@ nav .nav-content{
   padding-right: 48px;
 }
 
+.headline-grid-item-1 a {
+  max-width: 450px;
+}
+
 #headline {
   width: 100%;
   max-width: 800px;
@@ -130,10 +137,33 @@ nav .nav-content{
   margin-bottom: 0;
 }
 
+.order-button {
+  display: flex;
+  object-fit: cover;
+  flex-direction: column;
+}
+
 #order-button {
   width: 100%;
   max-width: 450px;
   filter: drop-shadow(5px 5px 5px #000000);
+}
+
+.order-button-hover {
+  display: flex;
+  position: absolute;
+}
+
+#order-button-hover {
+  width: 100%;
+  max-width: 450px;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+#order-button-hover:hover {
+  width: 100%;
+  opacity: 1;
 }
 
 .headline-grid-item-2 {
@@ -144,6 +174,17 @@ nav .nav-content{
 }
 
 #follow-us-text {
+  font-size: 26px;
+  width: 100%;
+  max-width: 900px;
+  padding-left: 10px;
+  color: #FEC00B;
+  font-family: koulen;
+  filter: drop-shadow(5px 5px 5px #000000);
+}
+
+#follow-us-text-mobile {
+  display: none;
   font-size: 26px;
   width: 100%;
   max-width: 900px;
@@ -216,20 +257,25 @@ nav .nav-content{
   color: white;
 }
 
+#reviews-text-2 {
+  margin-top: 8px;
+}
+
 .image2 {
   margin: 10px;
 }
 
 .review-1-grid {
-  padding-left: 100px;
+  padding-left: 150px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
 }
 
 .review-1-grid-item-1 {
   display: flex;
   justify-content: flex-end;
 }
+
 .review-1-grid-item-2 {
   display: flex;
   flex-direction: column;
@@ -246,12 +292,25 @@ nav .nav-content{
   padding: 0;
   margin: 0px;
   margin-left: 10px;
+  width: 100%;
 }
 
 #review-stars {
   width: 140px;
   margin: 0px;
-  margin-left: 5px;
+  margin-left: 8px;
+}
+
+#R4Pic1 {
+  width: 170px;
+}
+
+#R4Pic2 {
+  width: 170px;
+}
+
+#R5Pic3 {
+  opacity: 0;
 }
 
 /*=============================================================================================================================================================================================*/
@@ -303,7 +362,6 @@ body {
     color: #FEC00B;
     filter: drop-shadow(5px 5px 5px #000000);
     font-size: 48px;
-    letter-spacing: 0.5px;
     margin-bottom: 20px;
 }
 
@@ -312,7 +370,6 @@ body {
     color: white;
     filter: drop-shadow(5px 5px 5px #000000);
     font-size: 26px;
-    letter-spacing: 0.5px;
     line-height: 1.5;
 }
 
@@ -517,6 +574,40 @@ body, html {
 	}
 }
 
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background with opacity */
+}
+
+/* Lightbox image */
+.lightbox-content {
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 /*=============================================================================================================================================================================================*/
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -582,6 +673,19 @@ nav {
 
 #order-button {
   width: unset;
+  max-width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+#order-button-hover {
+  width: unset;
+  max-width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.headline-grid-item-1 a {
   max-width: 90%;
   padding: 0;
   margin: 0 auto;
@@ -607,6 +711,14 @@ nav {
 
 #tt-link, #tt-link-hover, #tt-link-hover:hover {
   width: 20vw;
+}
+
+#follow-us-text-mobile {
+  display: flex;
+  justify-content: center;
+  font-size: 7vw;
+  padding: 0px;
+  margin: 0;
 }
 
 /*=============================================================================================================================================================================================*/
@@ -651,9 +763,21 @@ nav {
 .testimonial .slidephotos { 
   width: auto;
   padding: 0px;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 15px 0px 15px;
   box-sizing: border-box;
   justify-content: space-evenly;
+}
+
+.testimonial .slidephotos img {
+  width: 30%;
+  height: unset;
+  object-fit: cover;
+  max-height: unset;
+  max-width: unset;
+}
+
+#R4Pic1, #R4Pic2 {
+  display: none;
 }
 
 /*=============================================================================================================================================================================================*/
@@ -791,6 +915,8 @@ nav {
   </style>
 </head>
 
+<script src="slideshow-frame.js"> </script>
+
 <body>
 
     <nav>
@@ -836,7 +962,19 @@ nav {
           Dine in and try our unlimited all you can eat packages or try our 
           ala carte menu items when you buy takeout or order for delivery 
           </p>
-          <img id="order-button"  src="RbOrderButton.png">
+         
+         <div class="order-button">
+          <a href="">
+            <img id="order-button" src="RbOrderButton.png">
+          </a>
+
+          <div class="order-button-hover">
+            <a href="">
+              <img id="order-button-hover" src="RbOrderButton-hover.png">
+            </a>
+          </div>
+
+        </div>  
 
           <div class="slideshow-container-mobile">
             <div class="banner-mobile">
@@ -873,38 +1011,11 @@ nav {
 
           <p id="follow-us-text">follow us</p>
       </div>
+      <p id="follow-us-text-mobile">follow us</p>
     </div>
 
-    <script>
-      function adjustElementHeight() {
-        var image1 = document.getElementById('image1');  // The first reference image
-        var image2 = document.getElementById('image2');  // The second reference image
-    
-        // Adjust height for elements with the class 'slideshow-container'
-        var slideshowContainers = document.querySelectorAll('.slideshow-container'); 
-        slideshowContainers.forEach(function(element) {
-          element.style.height = image1.clientHeight + 'px';  // Adjust height based on image1
-        });
-    
-        // Adjust height for elements with the class 'another-class'
-        var slideshowContainersmobile = document.querySelectorAll('.slideshow-container-mobile'); 
-        slideshowContainersmobile.forEach(function(element) {
-          element.style.height = image2.clientHeight + 'px';  // Adjust height based on image2
-        });
-      }
-    
-      window.onload = function() {
-        adjustElementHeight();
-      };
-    
-      window.onresize = function() {
-        adjustElementHeight();
-      };
-    </script>
-    
-    
-    
 
+    
   </section>
 
 
@@ -929,16 +1040,16 @@ nav {
             </div>
 
               <p id="reviews-text-1">
-                We tried their ultimate unlimited package wherein we had an unlimited burger. 
+                - We tried their ultimate unlimited package wherein we had an unlimited burger. 
                 The food was great and superb. We are very full. The owner and the crew are very kind and accommodating. 
                 The place is not that high-end and need some maintenance to attract more customers. 
                 Overall, our experience was great since the food were delicious especially the Takoyaki and Burger.
               </p>
 
               <div class="slidephotos">
-              <img id="RPic1" src="ReviewsP1.png" data-large-src="ReviewsP1.png" class="image2">
-              <img id="RPic2" src="ReviewsP2.png" data-large-src="ReviewsP2.png" class="image2">
-              <img id="RPic3" src="ReviewsP3.png" data-large-src="ReviewsP3.png" class="image2">
+              <img id="R1Pic1" src="ReviewsP1.png" data-large-src="ReviewsP1.png" class="image2 lightbox-trigger">
+              <img id="R1Pic2" src="ReviewsP2.png" data-large-src="ReviewsP2.png" class="image2 lightbox-trigger">
+              <img id="R1Pic3" src="ReviewsP3.png" data-large-src="ReviewsP3.png" class="image2 lightbox-trigger">
               </div>
             </div>
 
@@ -947,50 +1058,168 @@ nav {
               <div class="review-1-grid">
 
                 <div class="review-1-grid-item-1">
-                <img id="reviews-image-1" src="Review1Pic.png" class="image">
+                <img id="reviews-image-1" src="Review2Pic.png" class="image">
                 </div>
                 
                 <div class="review-1-grid-item-2">
-                <p id="reviewer-1"> Cyrus Jaciel Gal</p>
+                <p id="reviewer-1">Gian Tomas</p>
                 <img id="review-stars" src="ReviewStars.png" alt="">
                 </div>
   
               </div>
   
-                <p id="reviews-text-1">
-                  We tried their ultimate unlimited package wherein we had an unlimited burger. 
-                  The food was great and superb. We are very full. The owner and the crew are very kind and accommodating. 
-                  The place is not that high-end and need some maintenance to attract more customers. 
-                  Overall, our experience was great since the food were delicious especially the Takoyaki and Burger.
-                </p>
-  
-                <div class="slidephotos">
-                <img id="RPic1" src="ReviewsP1.png" data-large-src="ReviewsP1.png" class="image2">
-                <img id="RPic2" src="ReviewsP2.png" data-large-src="ReviewsP2.png" class="image2">
-                <img id="RPic3" src="ReviewsP3.png" data-large-src="ReviewsP3.png" class="image2">
-                </div>
-            </div>
-  
-            <div class="slide swiper-slide">
-              <img src="images/img3.jpg" alt="" class="image" />
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
-                saepe provident dolorem a quaerat quo error facere nihil deleniti
-                eligendi ipsum adipisci, fugit, architecto amet asperiores
-                doloremque deserunt eum nemo.
+              <p id="reviews-text-1">
+               - Me and my sister have ate and ordered from here several times already the food is very delicious and filling and I especially love their chicken wings
+               we keep coming back to have their unli wings package because the wings are just that good and there is little to no wait time on refills and the unlimited 
+               rice included is always served fresh and hot 
               </p>
-  
-              <i class="bx bxs-quote-alt-left quote-icon"></i>
-  
-              <div class="details">
-                <span class="name">Marnie Lotter</span>
-                <span class="job">Web Developer</span>
-              </div>
+
+                <div class="slidephotos">
+                  <img id="R2Pic1" src="Reviews2P1.jpg" class="image2 lightbox-trigger">
+                  <img id="R2Pic2" src="Reviews2P2.jpg" class="image2 lightbox-trigger">
+                  <img id="R2Pic3" src="Reviews2P3.jpg" class="image2 lightbox-trigger">
+                </div>
+              
             </div>
+
+            <div class="slide swiper-slide">
+
+              <div class="review-1-grid">
+
+                <div class="review-1-grid-item-1">
+                <img id="reviews-image-1" src="Review3Pic.jpg" class="image">
+                </div>
+                
+                <div class="review-1-grid-item-2">
+                <p id="reviewer-1">Patricia A. Bas-awan</p>
+                <img id="review-stars" src="ReviewStars.png" alt="">
+                </div>
+  
+              </div>
+  
+              <p id="reviews-text-1">
+                Super sarap po ng ibat ibang flavors ng chicken as in panlaban sa ibang unli chicken resto❤️❤️❤️👍👌
+              </p>
+
+              <div class="review-1-grid">
+
+                <div class="review-1-grid-item-1">
+                <img id="reviews-image-1" src="Review4Pic.jpg" class="image">
+                </div>
+                
+                <div class="review-1-grid-item-2">
+                <p id="reviewer-1"> Jennica Pepoy</p>
+                <img id="review-stars" src="ReviewStars.png" alt="">
+                </div>
+  
+              </div>
+  
+              <p id="reviews-text-2">
+               
+              </p>
+
+                <div class="slidephotos">
+                  <img id="R4Pic1" src="Reviews4P1.jpg" class="image2 lightbox-trigger R4Pics">
+                  <img id="R4Pic2" src="Reviews4P2.jpg" class="image2 lightbox-trigger R4Pics">
+                  <img id="R4Pic3" src="Reviews4P3.jpg" class="image2 lightbox-trigger R4Pics">
+                  <img id="R4Pic4" src="Reviews4P4.jpg" class="image2 lightbox-trigger R4Pics">
+                  <img id="R4Pic5" src="Reviews4P5.jpg" class="image2 lightbox-trigger R4Pics">
+                </div>
+
+            </div>
+
+            <div class="slide swiper-slide">
+
+              <div class="review-1-grid">
+
+                <div class="review-1-grid-item-1">
+                <img id="reviews-image-1" src="Review5Pic.jpg" class="image">
+                </div>
+                
+                <div class="review-1-grid-item-2">
+                <p id="reviewer-1">Mapuyan Franz</p>
+                <img id="review-stars" src="ReviewStars.png" alt="">
+                </div>
+  
+              </div>
+  
+              <p id="reviews-text-1">
+                Solid burger! Fries on the salty side pero pwede naman adjust yung dami ng cheese, masarap din at maraming bacon! 
+                Panalo din chicken wings! Hindi makapal ang breading ✨
+              </p>
+
+                <div class="slidephotos">
+                  <img id="R5Pic1" src="Reviews5P1.jpg" class="image2 lightbox-trigger">
+                  <img id="R5Pic2" src="Reviews5P2.jpg" class="image2 lightbox-trigger">
+                  <img id="R5Pic3" src="Reviews5P2.jpg" class="image2 lightbox-trigger">
+                </div>
+
+            </div>
+
+            <div class="slide swiper-slide">
+              
+              <div class="review-1-grid">
+
+                <div class="review-1-grid-item-1">
+                <img id="reviews-image-1" src="Review6Pic.jpg" class="image">
+                </div>
+                  
+                <div class="review-1-grid-item-2">
+                <p id="reviewer-1">Wyndelle Viray</p>
+                <img id="review-stars" src="ReviewStars.png" alt="">
+                </div>
+    
+              </div>
+    
+              <p id="reviews-text-1">
+                - Sobrang sarap ng burgeeeer!!
+              </p>
+
+              <div class="review-1-grid">
+
+                <div class="review-1-grid-item-1">
+                <img id="reviews-image-1" src="Review7Pic.png" class="image">
+                </div>
+                  
+                <div class="review-1-grid-item-2">
+                <p id="reviewer-1">Ryazel</p>
+                <img id="review-stars" src="ReviewStars.png" alt="">
+                </div>
+    
+              </div>
+    
+              <p id="reviews-text-1">
+                - Masarap Ang mga Foods nila Lalo na Yung mga Burger thumbs up ka sakin Retrobites 👍👍
+              </p>
+
+              <div class="review-1-grid">
+
+                <div class="review-1-grid-item-1">
+                <img id="reviews-image-1" src="Review8Pic.png" class="image">
+                </div>
+                  
+                <div class="review-1-grid-item-2">
+                <p id="reviewer-1">Alvin Ferry</p>
+                <img id="review-stars" src="ReviewStars.png" alt="">
+                </div>
+    
+              </div>
+    
+              <p id="reviews-text-1">
+                - Masarap ang foods nila at mababait ang mga crew
+              </p>
+
+            </div>
+
           </div>
           <div class="swiper-button-next nav-btn"></div>
           <div class="swiper-button-prev nav-btn"></div>
           <div class="swiper-pagination"></div>
+        </div>
+
+        <div id="lightbox" class="lightbox">
+          <span class="close">&times;</span>
+          <img class="lightbox-content" id="lightbox-image">
         </div>
 
         <!-- Swiper JS -->
@@ -998,7 +1227,41 @@ nav {
   
         <!-- JavaScript -->
         <script src="js/script.js"></script>
-  
+
+        <script>
+
+          // Get lightbox elements
+          const lightbox = document.getElementById('lightbox');
+          const lightboxImage = document.getElementById('lightbox-image');
+          const closeBtn = document.querySelector('.close');
+        
+          // Get all images with the class 'lightbox-trigger'
+          const images = document.querySelectorAll('.lightbox-trigger');
+        
+          // Show lightbox when an image is clicked
+          images.forEach(image => {
+          image.addEventListener('click', () => {
+              lightbox.style.display = 'block';
+              lightboxImage.src = image.src;
+          });
+        });
+        
+          // Close the lightbox when the close button is clicked
+          closeBtn.addEventListener('click', () => {
+          lightbox.style.display = 'none';
+        });
+        
+          // Close the lightbox when clicking outside the image
+          lightbox.addEventListener('click', (e) => {
+          if (e.target !== lightboxImage) {
+              lightbox.style.display = 'none';
+          }
+        });
+        
+        </script>
+
+
+
     </section>
 
     <div class="aboutus-container">   
