@@ -1,5 +1,5 @@
 .container {
-  height: 953px;
+  height: auto;
   width: 100%;
   display: flex;
   align-items: center;
@@ -16,11 +16,13 @@
   background-color: #1c1c1c;
   z-index: 0;
 }
+
 .testimonial .image {
   height: 90px;
   width: 90px;
   object-fit: cover;
   padding: 0px 160px 0px 150px;
+  border-radius: 50%;
 }
 
 .testimonial .image2 {
@@ -32,17 +34,24 @@
   display: flex;
   align-items: start;
   flex-direction: row;
-  height: 100%;
-  width: 100%;
   padding: 0px 160px 0px 150px;
 }
+
+.testimonial .slidephotos img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  max-height: 225px;
+  max-width: 170px;
+}
+
 
 .testimonial .slide {
   display: flex;
   align-items: start;
   justify-content: center;
   flex-direction: column;
-  height: 100%;
+  height: auto;
   width: 100%;
 }
 
@@ -52,25 +61,8 @@
   font-weight: 400;
   color: #333;
 }
-.slide .quote-icon {
-  font-size: 30px;
-  color: #4070f4;
-}
-.slide .details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.details .name {
-  font-size: 14px;
-  font-weight: 600;
-  color: #333;
-}
-.details .job {
-  font-size: 12px;
-  font-weight: 400;
-  color: #333;
-}
+
+
 /* swiper button css */
 .nav-btn {
   height: 40px;
