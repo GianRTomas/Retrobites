@@ -392,8 +392,9 @@ body {
 /*=============================================================================================================================================================================================*/
 
 .sidebar{
+  margin: 0;
   position: fixed;
-  top: 42px; 
+  top: 62px; 
   right: 0;
   height: 100%;
   width: 100%;
@@ -425,8 +426,8 @@ body, html {
 
 .slideshow-container {
   position: relative;
-  min-height: 100vh;
-  max-height: 953px;
+  min-height: 953px;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -875,11 +876,23 @@ nav {
 }
   
 .testimonial .slidephotos { 
-  width: auto;
+  width: 100%;
   padding: 0px;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 30px 0px 30px;
   box-sizing: border-box;
   justify-content: space-evenly;
+}
+
+.testimonial .slidephotos img {
+  width: 30%;
+  height: unset;
+  object-fit: cover;
+  max-height: unset;
+  max-width: unset;
+}
+
+#R4Pic1, #R4Pic2 {
+  display: none;
 }
 
 /*=============================================================================================================================================================================================*/
@@ -910,6 +923,14 @@ nav {
   padding-right: 18px;
 }
 
+}
+
+@media (min-width: 1920px) {
+  .slideshow-container {
+    min-height: 100vh;
+    max-height: 953px;
+
+  }
 }
 
   </style>
