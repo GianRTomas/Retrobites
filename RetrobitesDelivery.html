@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Retrobites Burger Kartel Unlimited</title>
+    <link rel="icon" type="image/png" href="RetrobitesLogoTransparent.png">
 
 <style>
 
@@ -110,6 +111,7 @@ nav .nav-content{
   padding-left: 48px;
   padding-right: 48px;
   padding-top: 120px;
+  gap: 2vw;
 }
 
 .delivery-item-1 {
@@ -138,9 +140,12 @@ nav .nav-content{
   width: 100%;
 }
 
+.delivery-item-2 a {
+  width: 26.5%;
+}
+
 #order-button {
-  width: 33%;
-  margin: 48px;
+  width: 100%;
 }
 
 .order-button-hover {
@@ -155,14 +160,13 @@ nav .nav-content{
 }
 
 #order-button-hover {
-  width: 33%;
+  width: 100%;
   opacity: 0;
   transition: all 0.2s ease;
-  margin: 48px;
 }
 
 #order-button-hover:hover {
-  width: 33%;
+  width: 100%;
   opacity: 1;
 }
 
@@ -198,12 +202,24 @@ nav {
 }
 
 /*=============================================================================================================================================================================================*/
-
-@media (min-width: 320px) and (max-width: 1023px) {
+@media (min-width: 320px) and (max-width: 767px) {
 .delivery-container {
   padding: 0;
-  padding-top: 8vh;
+  padding-top: 85px;
+  gap: 6vw;
 }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+.delivery-container {
+  padding: 0;
+  padding-top: 120px;
+  gap: 6vw;
+}
+
+}
+
+@media (min-width: 320px) and (max-width: 1023px) {
 
 .delivery-item-1 {
   display: none;
@@ -219,19 +235,8 @@ nav {
   width: 90%;
 }
 
-#order-button {
-  width: 80%;
-
-}
-
-#order-button-hover {
-  width: 80%;
-;
-}
-
-#order-button-hover:hover {
-  width: 80%;
-
+.delivery-item-2 a {
+  width: 66%;
 }
 
 .order-button-hover {
@@ -247,15 +252,12 @@ nav {
   display: none;
 }
 
-.delivery-container {
-  padding-top: 12vh;
-}
-
 }
 
 .sidebar{
+  margin: 0;
   position: fixed;
-  top: 42px; 
+  top: 62px; 
   right: 0;
   height: 100%;
   width: 100%;
@@ -266,6 +268,7 @@ nav {
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .sidebar li{
   width: 100%;
   left: 10%;
@@ -274,6 +277,7 @@ nav {
   margin-left: 6.5%;
   margin-top: 3%;
 }
+
 .sidebar a{
   width: 100%;
   color: #FEC00B;
@@ -321,17 +325,17 @@ nav {
         </div>
           
         <div class="delivery-item-2">
+          <a href="">
           <img id="order-button" src="RbOrderButton-2.png" alt="">
+          </a>
 
           <div class="order-button-hover">
+          <a href="">
             <img id="order-button-hover" src="RbOrderButton-2-hover.png">
+          </a>
           </div>
           
         </div>
-
-
-
-
 
       </div>
 
