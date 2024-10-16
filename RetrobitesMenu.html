@@ -3,39 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Retrobites Burger Kartel Unlimited</title>
+    <link rel="icon" type="image/png" href="RetrobitesLogoTransparent.png">
 
-    <style>
-  @font-face {
-    font-family: 'koulen';
-    src: url(Koulen-Regular.ttf);
-  }
+<style>
 
-          body {
-        background-color: #202020;
-        width: 100%;
-        height: 100%;
-        overflow-x: hidden;
-        margin:0; 
-        padding:0; 
-        box-sizing:border-box;
-        caret-color: transparent;
+@font-face {
+  font-family: 'koulen';
+  src: url(Koulen-Regular.ttf);
+}
 
+body {
+  background-color: #202020;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  margin:0; 
+  padding:0; 
+  box-sizing:border-box;
+  caret-color: transparent;
+}
 
-        
-    }
 html {
   scroll-snap-type: y mandatory;
 }
     
-    ::selection {
-    background-color: transparent; /* Set the background color to transparent */
-    color: inherit; /* Inherit the color of the text */
+::selection {
+  background-color: transparent; /* Set the background color to transparent */
+  color: inherit; /* Inherit the color of the text */
 }
-
-  /* Google Font Import Link */
-  @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
-
 
 nav{
   position: fixed;
@@ -85,7 +81,6 @@ nav .nav-content{
     top: 3.6px;
     height: 63px;
     left: 9px;
-
 }
 
 #RbText {
@@ -93,7 +88,6 @@ nav .nav-content{
     top: 9px;
     height: 54px;
     left: 90px;
-
 }
 
 #MenuButton {
@@ -110,40 +104,31 @@ nav .nav-content{
 }
 
 #Menu1 {
-    width: 60%;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 70%;
     filter: drop-shadow(0px 5px 10px #000000);
 
 }
 
 #Menu2 {
-    width: 60%;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 70%;
     filter: drop-shadow(0px 5px 10px #000000);
 }
 
 #Menu3 {
-    width: 60%;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 70%;
     filter: drop-shadow(0px 5px 10px #000000);
 }
 
 section {
-    height: 4490px;
+    height: auto;
 }
 
 .menu-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Start items from the top */
-  height: 100vh; /* Or another height based on your layout */
+  justify-content: flex-start; 
+  height: 100vh;
   padding-top: 100px;
   position: relative;
 }
@@ -159,7 +144,8 @@ section {
   margin-bottom: 20px;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 374px) {
+
   #Menu1, #Menu2, #Menu3 {
   margin-bottom: 10px;
   width: 80%;
@@ -187,32 +173,53 @@ nav {
   transform: translate(-50%, -50%);
 }
 
-
-
 }
 
 @media (min-width: 375px) and (max-width: 424px) {
+
+#Menu1, #Menu2, #Menu3 {
+  margin-bottom: 10px;
+  width: 80%;
+}
+
+.nav-links li a {
+  display: none;
+}
+
 
 #MenuButton {
   left: 76.5%;
 }
 
+nav {
+  padding: 31px;;
+}
 
+#RbLogo {
+  height: 55px;
+  top: 50%;
+  left: 11%;
+  transform: translate(-50%, -50%);
+}
 
+#RbText {
+  height: 50px;
+  top: 50%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+}
 
 }
 
-@media (min-width: 425px) and (max-width: 480px) {
+@media (min-width: 425px) and (max-width: 425px) {
 
 #MenuButton {
   left: 77.8%;
 }
 
-
-
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 768px) {
 
 #MenuButton {
   display: none;
@@ -237,11 +244,13 @@ display: none;
 
 }
 
+
 .sidebar{
-  position: absolute;
-  top: 42px; 
+  margin: 0;
+  position: fixed;
+  top: 62px; 
   right: 0;
-  height: 1000px;
+  height: 100%;
   width: 100%;
   background-color: #53122B;
   list-style: none;
@@ -250,6 +259,7 @@ display: none;
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .sidebar li{
   width: 100%;
   left: 10%;
@@ -258,11 +268,13 @@ display: none;
   margin-left: 6.5%;
   margin-top: 3%;
 }
+
 .sidebar a{
   width: 100%;
   color: #FEC00B;
   text-decoration: none;
 }
+
 
 
     </style>
@@ -283,13 +295,13 @@ display: none;
           <li><a href="index.html">Home</a></li>
           <li><a href="RetrobitesMenu.html">Menu</a></li>
           <li><a href="RetrobitesDelivery.html">Delivery</a></li>
-          <li><a href="#">Locations</a></li>
+          <li><a href="RetrobitesLocations.html">Locations</a></li>
         </ul>
         <ul class="sidebar">
           <li><a href="index.html">Home</a></li>
           <li><a href="RetrobitesMenu.html">Menu</a></li>
           <li><a href="RetrobitesDelivery.html">Delivery</a></li>
-          <li><a href="#">Locations</a></li>
+          <li><a href="RetrobitesLocations.html">Locations</a></li>
         </ul>
       </div>
     </nav>
